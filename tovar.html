@@ -1,0 +1,1142 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test Product - AltaBeds</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href='/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/js/jquery.zoom.min.js"></script>
+    <script src="/js/main.js"></script>
+</head>
+
+<body>
+<style>
+    .preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10000;
+  visibility: hidden;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  margin: 0;
+background-image: radial-gradient(circle, #fdfcfb 0%, #e2d1c3 100%);
+/*  background-color: #10131a;*/
+  transition: opacity 400ms ease-in-out, visibility 0s 400ms;
+}
+    
+    .circles-group::before {
+    content: " ";
+    width: 160px;
+    height: 60px;
+    background: url(img/logo.svg) no-repeat;
+    position: absolute;
+    margin: -86px 0px 5px -51px;
+/*
+         -webkit-animation: stretchdelay 0.71s infinite ease-in-out;
+  animation: stretchdelay 0.71s infinite ease-in-out;
+*/
+   
+    }
+
+.show-preloader {
+  visibility: visible;
+  opacity: 1;
+}
+
+.circle {
+  background: radial-gradient(circle, #fff 0%, #c1a69a 30%); /*#c1a69a*/
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-animation: stretchdelay 0.7s infinite ease-in-out;
+  animation: stretchdelay 0.7s infinite ease-in-out;
+}
+
+.preloader .circle:nth-child(1) {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+
+.preloader .circle:nth-child(2) {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+.preloader .circle:nth-child(3) {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+
+ 
+
+@keyframes stretchdelay {
+  0%, 
+  40%,
+  100% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+  }
+  20% {
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+  }
+}</style>
+<figure class="preloader" id="preloader">
+  <div class="circles-group">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+ 
+  </div>
+</figure>
+<div class="background"></div>
+
+<script>
+    
+const preloader = document.querySelector('#preloader');
+
+preloader.classList.add('show-preloader');
+
+window.addEventListener('load', function () {
+	setTimeout(function(){
+    	preloader.classList.remove('show-preloader');
+	},0);
+});    
+</script>
+<!--PRELOADER-->
+    
+ <nav class="d-none p-2 col-12 text-white  text-center" style="background: linear-gradient(rgb(227, 177, 157) 0%, rgb(217, 171, 119) 100%)"  >
+    <div class="container-fluid "  style="border: 1px solid rgb(255, 255, 255); ">
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center   my-2">
+        <li class="nav-item"><a href="#" class="nav   text-white   " style="text-decoration:none">  
+        Zarejestruj sie i otrzymaj voucher 50 zł!</a></li>
+      </ul>
+      <!--ul class="nav">
+        <li class="nav-item"><a href="#" class="nav-link text-white px-2">tel: +48 777-777-777</a></li>
+      </ul-->
+    </div>
+  </nav>
+     
+      
+        <nav class="py-2 bg-light border-bottom">
+     <div class="container d-flex flex-wrap">
+
+
+<!--
+         <div class="nav col-4">
+                 <style>
+                     .map {position: relative;
+                        top: -6px; font-size: 14px!important;
+                     }
+                 </style>
+                 <ul class=" list-inline ps-0 mb-0">
+                     <li class="list-inline-item"> 
+                         <i class="bx bx-map  rounded-circle border border-secondary p-1 "></i>
+                             <a class="btn map" target="_blank" href="https://www.google.com/maps/place/JohnsonStyle+Sp.z.o.o/@52.1616071,20.9273879,15z/data=!4m2!3m1!1s0x0:0x12e8844762fb5cb2?sa=X&ved=2ahUKEwi4mJj5gev3AhXAQvEDHV9qBYkQ_BJ6BAhAEAU">Aleja Krakowska 97, 05-090 Raszyn</a>
+                     </li>
+                     <li class="list-inline-item">
+                         <i class="bx bx-phone rounded-circle border border-secondary p-1  "></i>
+                         <a class="btn map" href="tel:+48 999 777 777">+48 777-777-777 </a>
+                                                                </li>
+                 </ul>
+             </div>
+         </div>
+-->
+
+
+
+<!--offset-4-->
+         <a href="/" class=" offset-lg-4 col-lg-4 col-12 d-flex justify-content-center  ">
+             <img src="/img/logo.svg" width="200">
+         </a>
+
+         <div class="col-lg-4 col-12 nav d-flex justify-content-lg-end justify-content-center ">
+
+             <div class="d-flex justify-content-center h-100  ">
+                 <div class="searchbar">
+                     <input class="search_input" type="text" name="" placeholder="Szukaj...">
+                     <a href="#" class="search_icon"><i class="bx bx-search"></i></a>
+                 </div>
+             </div>
+
+
+
+             <!--
+             <a href="#" class="btn btn-outline-dark p-2 d-none  d-sm-block" target="_blank" rel="noopener">
+                 <i class="bx bx-search   "></i>
+             </a>
+-->
+             <button class="btn   p-2  ms-1  " target="_blank" rel="noopener">
+                 <i class="bx bx-heart    "></i>
+             </button>
+             <button class="btn    p-2 mx-1  " target="_blank" rel="noopener">
+                 <i class="bx bx-user   "></i>
+             </button>
+             <button id="myCartIco" class="btn  p-2  " target="_blank" rel="noopener">
+                 <i class="bx bx-cart   "></i>
+             </button>
+
+             <div id="myCart" class="sidenav">
+                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                 <a href="#"> <i class="bx bx-cart   "></i> - Tovar #1 - 5999 zl</a>
+                 <a href="#"> <i class="bx bx-cart   "></i> - Tovar #2 - 4999 zl</a>
+                 <a href="#"> <i class="bx bx-cart   "></i> - Tovar #3 - 3999 zl</a>
+                 <a href="#"> <i class="bx bx-cart   "></i> - Tovar #4 - 7050 zl</a>
+             </div>
+
+
+
+         </div>
+     </div>
+ </nav>
+
+
+ <header id="navbar-sticky" class=" mb-auto navbar navbar-expand-lg navbar-light bg-light ">
+     <div class="container px-0">
+         <div id="navbarNav" class="offcanvas offcanvas-end">
+             <div class="offcanvas-header border-bottom">
+                 <h5 class="offcanvas-title">Menu</h5>
+                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+             </div>
+             <div class="offcanvas-body mx-auto flex-column">
+                 <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+
+                     <li class="nav-item">
+                         <a href="#" class="nav-link">Nowości</a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="category.html" class="nav-link">Bestsellery</a>
+                     </li>
+                     <li class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Łóżka</a>
+                         <div class="dropdown-menu rounded-0 border-0 px-3 py-4" style="min-width: 22rem;">
+                             <div class="d-lg-flex ">
+                                 <div class="mega-dropdown-column">
+                                     <h6 class="px-3 mb-2">Category #1</h6>
+                                     <ul class="list-unstyled mb-3">
+                                         <li><a href="#" class="dropdown-item py-1">Bestsellery sofa</a></li>
+                                         <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
+                                         <li><a href="#" class="dropdown-item py-1">Bestsellery sofa</a></li>
+                                         <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
+
+                                     </ul>
+
+                                 </div>
+                                 <div class="mega-dropdown-column">
+                                     <h6 class="px-3 mb-2">Category #2</h6>
+                                     <ul class="list-unstyled mb-3">
+                                         <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
+                                         <li><a href="#" class="dropdown-item py-1">Bestsellery sofa</a></li>
+                                         <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
+                                         <li><a href="#" class="dropdown-item py-1"> Bestsellery sofa</a></li>
+
+                                     </ul>
+                                 </div>
+                                 <div class="mega-dropdown-column px-2 ">
+
+                                     <img src="/img/white_Corona4-new_velvet2.jpg" alt="" style="max-width: 250px">
+<!--                                     <img src="https://via.placeholder.com/250x150/FF0000/FFFFFF" alt="">-->
+
+                                 </div>
+                             </div>
+                         </div>
+                     </li>
+                     <li class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown">Wezgłowia</a>
+                         <ul class="dropdown-menu rounded-0 border-0">
+                             <li><a href="#" class="dropdown-item">subCategory 3/1</a></li>
+
+                         </ul>
+                     </li>
+                     <li class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Materace</a>
+                         <ul class="dropdown-menu rounded-0 border-0">
+                             <li><a href="#" class="dropdown-item">subCategory 3/1</a></li>
+
+                         </ul>
+                     </li>
+                     <li class="nav-item">
+                         <a href="#" class="nav-link">Sofy</a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="#" class="nav-link">Tekstylia</a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="#" class="nav-link">Inspiracje</a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="#" class="nav-link">Szybka dostawa</a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="#" class="nav-link">Okazje</a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="#" class="nav-link">Strefa Architekta</a>
+                     </li>
+
+                 </ul>
+             </div>
+
+         </div>
+
+         <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+         <!--
+        <a href="#" class="btn btn-outline-dark btn-sm " target="_blank" rel="noopener">
+            <i class="bx bx-heart fs-6  "></i>
+
+        </a>
+
+        <a href="#" class="btn btn-outline-dark btn-sm  mx-1" target="_blank" rel="noopener">
+            <i class="bx bx-user fs-6  "></i>
+
+        </a>
+        <a href="#" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">
+            <i class="bx bx-cart fs-6 "></i>
+
+        </a>
+-->
+     </div>
+ </header>    <section class="container  my-3 product-single ">
+        <div class="row">
+
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item  text-sm"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Łóżka</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Collection</li>
+                </ol>
+            </nav>
+
+
+
+            <div class="col-8">
+
+                <div class="sp-img_area g-3 overflow-hidden h-md-250 position-relativ">
+                    <div class="slider slider-nav" id="sImg">
+                        <figure id="sImg0">
+                            <img src="" class="img-fluid" alt="">
+                        </figure>
+                        <figure id="sImg1">
+                            <img src="" class="img-fluid" alt="">
+                        </figure>
+                        <figure id="sImg2">
+                            <img src="" class="img-fluid" alt="">
+                        </figure>
+                        <div><i class='icons bx bx-play-circle'></i>
+                            <img src="/img/product/pr1-1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div><i class='icons bx bx-rotate-right'></i>
+                            <img src="/img/product/pr2-1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div>
+                            <img src="/img/product2/CHAMBERY_N21_STR_PC_140_MGN_364_GLD_TAP_CHR_BS_6.png" class="img-fluid" alt="">
+                        </div>
+                        <div>
+                            <img src="/img/product2/CHAMBERY_N21_STR_PC_140_MGN_364_GLD_TAP_CHR_BS_7.png" class="img-fluid" alt="">
+                        </div>
+                        <div>
+                            <img src="/img/product2/CHAMBERY_N21_STR_PC_140_MGN_364_GLD_TAP_CHR_BS_8.jpg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+
+                    <div class="slider slider-for">
+                        <figure class="zoom images-group" id="bImg0">
+                        </figure>
+                        <figure class="zoom images-group" id="bImg1">
+                        </figure>
+                        <figure class="zoom images-group" id="bImg2">
+                        </figure>
+                        <div>
+                            <video class="img-fluid" autoplay muted loop>
+                                <source src="/img/product/film/film.ogv" type="video/ogg">
+                            </video>
+                        </div>
+                        <div class="zoom">
+                            <img src="/img/product/gif/Joy_opens.gif" class="img-fluid " alt="">
+                        </div>
+                        <div class="zoom">
+                            <img src="/img/product2/CHAMBERY_N21_STR_PC_140_MGN_364_GLD_TAP_CHR_BS_6.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="zoom">
+                            <img src="/img/product2/CHAMBERY_N21_STR_PC_140_MGN_364_GLD_TAP_CHR_BS_7.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="zoom">
+                            <img src="/img/product2/CHAMBERY_N21_STR_PC_140_MGN_364_GLD_TAP_CHR_BS_8.jpg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-4">
+                <h1 class="text-dark title">Łóżko kontynentalne na wysokich nóżkach z pojemnikiem «AMORE»</h1>
+
+
+                <div class=" my-3 py-2 text-center border">
+                    <div class="oldprice ">7 000.00 zł </div>
+                    <div class="price"><span>4 499.00 zł</span> z VAT</div>
+                </div>
+
+                <style>
+                    .amber-text {
+                        color: #ffc107 !important;
+                    }
+
+                    .inform {
+                        position: absolute;
+                        top: 7px;
+                        right: -9px;
+                        background: #fff;
+                        border-radius: 20px;
+                        width: 16px;
+                        height: 16px;
+                        color: #b1998f;
+                    }
+
+                    .size {
+                        position: relative;
+                    }
+
+                    .size .bx-info-circle:before {
+
+                        top: -2px;
+                        position: relative;
+                    }
+
+                    }
+                </style>
+                <span id="rateMe" onclick="window.open(
+              'rating.html', '_blank');">
+                    <i class="bx bxs-star py-2  rate-popover amber-text" data-index="0" data-html="true" data-toggle="popover" data-placement="top" title="" data-original-title="Very bad"></i>
+                    <i class="bx bxs-star py-2  rate-popover amber-text" data-index="1" data-html="true" data-toggle="popover" data-placement="top" title="" data-original-title="Poor"></i>
+                    <i class="bx bxs-star py-2 rate-popover amber-text" data-index="2" data-html="true" data-toggle="popover" data-placement="top" title="" data-original-title="OK"></i>
+                    <i class="bx bxs-star py-2  rate-popover amber-text" data-index="3" data-html="true" data-toggle="popover" data-placement="top" title="" data-original-title="Good"></i>
+                    <i class="bx bx-star py-2  rate-popover amber-text" data-index="4" data-html="true" data-toggle="popover" data-placement="top" title="" data-original-title="Excellent"></i>
+                </span>
+
+                <div class="my-2">
+                    <div class="option-name my-2">Powierzchnia spania (cm) :
+                        <span class="result">180x200</span>
+                    </div>
+                    <button type=" button" class="btn btn-outline-secondary border-2 btn-sm" value="">140x200</button>
+                    <button type="button" class="btn btn-outline-secondary border-2 btn-sm" value="">160x200</button>
+                    <button type="button" class="btn btn-outline-secondary border-2 btn-sm active " value="">180x200</button>
+                    <button type="button" class="btn btn-outline-secondary border-2 btn-sm" value="">200x200</button>
+                </div>
+                <div class="my-3" id="tkaninaClass">
+                    <div class="my-2 option-name">Tkanina: <span class="result">Velvet</span></div>
+                    <button type="button" class="size btn btn-outline-secondary border-2 btn-sm mx-1" value="Velvet">Amazing Velvet
+
+                        <a class="btn-outline inform" data-bs-toggle="modal" href="#exampleModalToggle" role="button"><i class='bx bx-info-circle'></i></a>
+
+                    </button>
+                    <button type="button" class="size btn btn-outline-secondary border-2 btn-sm mx-1" value="Tkanina">Fiu Fiu
+                        <a class="btn-outline inform" data-bs-toggle="modal" href="#exampleModalToggle" role="button"><i class='bx bx-info-circle'></i></a></button>
+
+                    <button type="button" class="size btn btn-outline-secondary border-2 btn-sm mx-1" value="Leather">Boucle<a class="btn-outline inform" data-bs-toggle="modal" href="#exampleModalToggle" role="button"><i class='bx bx-info-circle'></i></a></button>
+                    <button type="button" class="size btn btn-outline-secondary border-2 btn-sm mx-1" value="Valvet">mat Velvet<a class="btn-outline inform" data-bs-toggle="modal" href="#exampleModalToggle" role="button"><i class='bx bx-info-circle'></i></a></button>
+                </div>
+
+
+                <div class=" product-description options my-3" id="colors">
+                    <div class="my-2 option-name">Color: <span class="result">Velvet 000</span></div>
+
+                    <div class="option single-color">
+                        <input type="radio" value="Velvet 000" id="Velvet 000" name="options[colorW]" />
+                        <label for="Velvet 000">
+                            <span data-color="Velvet" style="background: url(/img/product2/velvet/000.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/velvet/000.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Velvet 000</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Velvet 001" id="Velvet 001" name="options[colorW]" />
+                        <label for="Velvet 001">
+                            <span data-color="Velvet" style="background: url(/img/product2/velvet/001.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/velvet/001.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Velvet 001</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Velvet 002" id="Velvet 002" name="options[colorW]" />
+                        <label for="Velvet 002">
+                            <span data-color="Velvet" style="background: url(/img/product2/velvet/002.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/velvet/002.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Velvet 002</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Velvet 003" id="Velvet 003" name="options[colorW]" />
+                        <label for="Velvet 003">
+                            <span data-color="Velvet" style="background: url(/img/product2/velvet/003.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/velvet/003.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Velvet 003</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="option single-color">
+                        <input type="radio" value="Tkanina 000" id="Tkanina 000" name="options[colorW]" />
+                        <label for="Tkanina 000">
+                            <span data-color="Tkanina" style="background: url(/img/product2/tkanina/000.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/tkanina/000.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Tkanina 000</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Tkanina 001" id="Tkanina 001" name="options[colorW]" />
+                        <label for="Tkanina 001">
+                            <span data-color="Tkanina" style="background: url(/img/product2/tkanina/001.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/tkanina/001.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Tkanina 001</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Tkanina 002" id="Tkanina 002" name="options[colorW]" />
+                        <label for="Tkanina 002">
+                            <span data-color="Tkanina" style="background: url(/img/product2/tkanina/002.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/tkanina/002.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Tkanina 002</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Tkanina 003" id="Tkanina 003" name="options[colorW]" />
+                        <label for="Tkanina 003">
+                            <span data-color="Tkanina" style="background: url(/img/product2/tkanina/003.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/tkanina/003.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Tkanina 003</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="option single-color">
+                        <input type="radio" value="Leather 000" id="Leather 000" name="options[colorW]" />
+                        <label for="Leather 000">
+                            <span data-color="Leather" style="background: url(/img/product2/leather/000.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/leather/000.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Leather 000</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Leather 001" id="Leather 001" name="options[colorW]" />
+                        <label for="Leather 001">
+                            <span data-color="Leather" style="background: url(/img/product2/leather/001.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/leather/001.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Leather 001</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Leather 002" id="Leather 002" name="options[colorW]" />
+                        <label for="Leather 002">
+                            <span data-color="Leather" style="background: url(/img/product2/leather/002.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/leather/002.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Leather 002</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Leather 003" id="Leather 003" name="options[colorW]" />
+                        <label for="Leather 003">
+                            <span data-color="Leather" style="background: url(/img/product2/leather/003.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/leather/003.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Leather 003</div>
+                                </div>
+                            </span>
+
+                        </label>
+                    </div>
+                </div>
+
+
+
+                <div class=" product-description options my-3" id="pin">
+                    <div class=" option-name">Pinezka: <span class="result">Gold</span></div>
+
+                    <div class="option pin-color">
+                        <input type="radio" value="pin_g" id="pin gold" name="options[pin]" />
+                        <label for="pin gold">
+                            <span style="background: url(/img/options/pin/g.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/options/pin/g.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Gold</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="option pin-color">
+                        <input type="radio" value="pin_b" id="pin black" name="options[pin]" />
+                        <label for="pin black">
+                            <span style="background: url(/img/options/pin/b.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/options/pin/b.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Black</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="option pin-color">
+                        <input type="radio" value="pin_n" id="pin nikel" name="options[pin]" />
+                        <label for="pin nikel">
+                            <span style="background: url(/img/options/pin/n.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/options/pin/n.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Nikel</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class=" product-description options my-3" id="nozki">
+                    <div class=" option-name">Zestaw nózek: <span class="result">noga black</span></div>
+
+                    <div class="option nozki-color">
+                        <input type="radio" value="nozka+b" id="noga black" name="options[noga]" />
+                        <label for="noga black">
+                            <span style="background: url(/img/options/nozki/nozka+b.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/options/nozki/nozka+b.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">NOGA MEBLOWA GWIAZDA 13,5 CM, CZARNY MAT</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="option nozki-color">
+                        <input type="radio" value="nozka+g" id="noga gold" name="options[noga]" />
+                        <label for="noga gold">
+
+                            <span style="background: url(/img/options/nozki/nozka+g.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/options/nozki/nozka+g.jpg" alt=" ">
+
+                                    </div>
+                                    <div class="titleOp">NOGA MEBLOWA GWIAZDA 13,5 CM, Złoty</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="option nozki-color">
+                        <input type="radio" value="nozka+n" id="noga nikel" name="options[noga]" />
+                        <label for="noga nikel">
+                            <span style="background: url(/img/options/nozki/nozka+n.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/options/nozki/nozka+n.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">NOGA MEBLOWA GWIAZDA 13,5 CM, NIKIEL POŁYSK</div>
+                                </div>
+                            </span>
+
+                        </label>
+                    </div>
+                    <div class="option nozki-color">
+                        <input type="radio" value="wood" id="wood" name="options[noga]" />
+                        <label for="wood">
+                            <span style="background: url(/img/options/nozki/wood.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/options/nozki/wood.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Noga bukowa surowa 60/30 mm, H-250</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class=" my-3 py-2 text-center border">
+                    <button type="button" class="btn btn-alta border-1 btn-lg " value="">
+                        <i class="bx bx-cart"></i> Do koszyka</button>
+                    <button type="button" class="btn btn-outline-alta border-1 btn-lg " value="">
+                        <i class="bx bx-heart"></i></button>
+                    <div class="info-after-cart text-left p-2">
+
+                        Dostawa: 4tygodni Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam in odio possimus consequuntur consectetur voluptas tempora, a fuga!
+                    </div>
+                </div>
+
+                <div class=" my-5">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta necessitatibus culpa dignissimos nobis, delectus inventore est in porro harum ducimus? Distinctio consequatur iste incidunt dicta, quo quasi, repellat pariatur est.</p>
+                </div>
+            </div>
+
+            <div class="w-100 bg-warning p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sunt delectus deserunt cumque exercitationem earum animi libero excepturi repudiandae non, voluptas veritatis, porro totam incidunt eveniet quis deleniti perferendis aspernatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit quisquam, laboriosam impedit omnis nostrum, quod aliquam non asperiores, incidunt in aliquid sed vel! Quidem minima labore reprehenderit eos dolore assumenda!</div>
+
+        </div>
+    </section>
+
+ <section id="newslatter" class=" " style="background:#50403a">
+     <div class="container mt-5 p-5     font-sm">
+		<div class="row  text-sm-left text-md-left">
+        
+               <div class="col-xs-6 text-white col align-middle">
+					<h5><i class='bx bxl-telegram' ></i> NEWSLETTER</h5>
+					<p>Zawsze aktualne informacje o nowościach i promocjach. <br> <u>Kupon rabatowy</u> na pierwsze zakupy</p>
+					 
+				</div>
+				<div class="col-xs-6  col">
+					 <div class="input-group input-group-lg mb-3 mt-4">
+                              <input type="text" class="form-control" placeholder="Wpisz adres e-mail" aria-label="Recipient's username" aria-describedby="button-addon2">
+                              <button class="btn btn-outline-light border-3" type="button" id="button-addon2">Zapisz się</button>
+                            </div>
+				</div>
+        
+        
+         </div>
+     </div>
+ </section>
+
+<!-- Footer -->
+	<section id="footer">
+		<div class="container   p-5     font-sm">
+			<div class="row  text-sm-left text-md-left">
+				<div class="col-xs-12  col  py-5">
+					<h5>Pomoc</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="#"><i class='bx bx-chevrons-right'></i>Regulaminy</a></li>
+						<li><a href="#"><i class='bx bx-chevrons-right'></i>Zwroty i reklamacje</a></li>
+						<li><a href="#"><i class='bx bx-chevrons-right'></i>Pytania i odpowiedzi</a></li>
+					 
+					</ul>
+				</div>
+				<div class="col-xs-12  col  py-5">
+					<h5>Moje konto</h5>
+					<ul class="list-unstyled quick-links">
+					  <li><a href="#"><i class='bx bx-chevrons-right'></i>Twoje zamówienia</a></li>
+					  <li><a href="#"><i class='bx bx-chevrons-right'></i>Ustawienia konta</a></li>
+					  <li><a href="#"><i class='bx bx-chevrons-right'></i>Przechowalnia</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12  col  py-5">
+					<h5>Dostawa i płatność</h5>
+					<ul class="list-unstyled quick-links">
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Formy płatności</a></li> 
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Ratyy</a></li> 
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Czas i koszty dostawy</a></li> 
+					</ul>
+				</div>
+				 <div class="col-xs-12  col  py-5">
+					<h5> Informacje</h5>
+					<ul class="list-unstyled quick-links">
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Formularz kontaktowy</a></li> 
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Polityka prywatności</a></li> 
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Jak kupować?</a></li> 
+					</ul>
+				</div>
+				<div class="col-xs-12   col  py-5">
+					<h5> O Nas</h5>
+					<ul class="list-unstyled quick-links">
+                        <li><b>Zapraszamy do kontaktu</b></li> 
+						 <li><a href="#"><i class='bx bx-mail-send' ></i> info@johnsonstyle.pl</a></li> 
+						 <li><a href="#"><i class='bx bx-phone' ></i> +4 777-777-777</a></li> 
+					</ul>
+                     
+                      
+				</div>
+			</div>
+			 
+			 
+			<div class="row">
+				 <hr>
+				<div class="col-lg-6 col-12 mt-2 mt-sm-2 text-center text-white">
+					<ul class="list-unstyled quick-links social">
+<!--                       <li style="float:left"><b>Obserwuj nas</b></li> -->
+						 <li>
+						   <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+						   <a href="#"><i class='bx bxl-instagram' ></i></a>
+						   <a href="#"><i class='bx bxl-youtube' ></i></a>
+						 
+						 </li> 
+						  
+					</ul>
+				</div>
+<!--
+				<div class="col-lg-4 col-12 mt-2 mt-sm-2 text-center text-white">
+					<p>  All right Reversed. </p>
+					<p class="h6">© All right Reversed.<a class="text-green ml-2" href="#" target="_blank">JohnsonStyle</a></p>
+				</div>
+-->
+				<div class="col-lg-6 col-12 mt-2 mt-sm-2 text-center text-white"> 
+					 <ul class="list-unstyled quick-links  dp">
+<!--                       <li><b>Dostawa i płatność</b></li> -->
+						 <li>
+						   <i class='bx bxl-visa' ></i>
+						   <i class='bx bxl-mastercard' ></i>
+						   <i class='bx bxl-paypal' ></i>
+						 </li> 
+					</ul>
+				</div>
+				<hr>
+			</div>
+			
+			<div class="row">
+				 
+			 
+				<div class="col-  col-12 mt-2 mt-sm-2 text-center text-white">
+			 
+					<p class="h6">© All right Reversed.<a class="text-green ml-2" href="#" target="_blank"> JohnsonStyle 2022</a></p>
+				</div>
+				 
+				 
+			</div>
+			
+		</div>
+	</section>
+	<!-- ./Footer -->
+
+
+<style>
+    #newslatter h5{
+        font-weight: 100;
+        font-size: 40px;
+    }
+
+#footer {
+    background: #c1a69a !important;
+}
+    
+    #footer hr{
+        color:#9aa7b5
+    }
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+    text-transform: uppercase
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+ #footer ul li b {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 100;
+    }
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:40px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+    #footer ul.dp li i {
+ 
+	font-size:35px;
+ 
+}
+#footer ul.social li:hover{
+	padding: 3px 0;
+	margin-left:0px!important;
+	font-weight:100!important;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li a:hover i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
+
+</style>
+
+<script>
+    //NAVBAR STICKY ON SCROLL
+    document.addEventListener("DOMContentLoaded", function() {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 250) {
+                document.getElementById('navbar-sticky').classList.add('fixed-top');
+
+                navbar_height = document.querySelector('.navbar').offsetHeight;
+                document.body.style.paddingTop = navbar_height + 'px';
+            } else {
+                document.getElementById('navbar-sticky').classList.remove('fixed-top');
+                // remove padding top from body
+                document.body.style.paddingTop = '0';
+            }
+        });
+    });
+ 
+ 
+    //DROPDOWN  effect on hover
+    document.addEventListener("DOMContentLoaded", function() {
+        if (window.innerWidth > 992) {
+            document.querySelectorAll('.navbar .nav-item').forEach(function(everyitem) {
+                everyitem.addEventListener('mouseover', function(e) {
+                    let el_link = this.querySelector('a[data-bs-toggle]');
+                    if (el_link != null) {
+                        let nextEl = el_link.nextElementSibling;
+                        el_link.classList.add('show');
+                        nextEl.classList.add('show');
+                    }
+                });
+                everyitem.addEventListener('mouseleave', function(e) {
+                    let el_link = this.querySelector('a[data-bs-toggle]');
+
+                    if (el_link != null) {
+                        let nextEl = el_link.nextElementSibling;
+                        el_link.classList.remove('show');
+                        nextEl.classList.remove('show');
+                    }
+                })
+            });
+
+        }
+    });
+
+    //CART SIDEBAR
+ 
+document.getElementById("myCartIco").onclick = function() {
+  document.getElementById("myCart").classList.toggle("cartTrigger"); 
+}
+function closeNav() {
+  document.getElementById("myCart").classList.toggle("cartTrigger"); 
+  
+}
+    
+    
+    
+    
+//slider
+
+$('.product-carousel').slick({
+		lazyLoad: 'ondemand',
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		nextArrow: ' <i class="arrow right"> ',
+		prevArrow: '<i class="arrow left">',
+		infinite: false,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					infinite: true,
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		]
+});
+    $('.product-carousel-2').slick({
+		lazyLoad: 'ondemand',
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		nextArrow: ' <i class="arrow right"> ',
+		prevArrow: '<i class="arrow left">',
+		infinite: false,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					infinite: true,
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		]
+});
+</script>
+
+
+
+
+
+
+
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel">Takanina (description)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="/img/product2/velvet/000.jpg" alt="">
+                    <img src="/img/product2/velvet/001.jpg" alt="">
+                    <img src="/img/product2/velvet/002.jpg" alt="">
+                    <div class="m-3">
+                        <p><b>Tkanina:</b> Velvet Amazing</p>
+                        <p><b>Typ:</b> Premium, aksamit</p>
+                        <p><b>Waciwoci:</b> 450 g/m2; 90k cykli martindale`a. Mozliwe intensywne codzienne uzytkowanie</p>
+
+                    </div>
+                </div>
+                <!--
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+                </div>
+-->
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Hide this modal and show the first with the button below.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

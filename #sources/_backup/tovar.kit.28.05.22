@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JohnsonStyle</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href='/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="/js/jquery.zoom.min.js"></script>
+</head>
+
+<body>
+
+
+
+
+    <!-- @import "header.html" -->
+
+
+    <style>
+        .sp-img_area {
+            -webkit-box-orient: unset;
+            -webkit-box-direction: unset;
+            -webkit-flex-direction: unset;
+            -ms-flex-direction: unset;
+            flex-direction: unset;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+
+
+            -webkit-box-align: baseline;
+            -webkit-align-items: baseline;
+            -ms-flex-align: baseline;
+            align-items: baseline;
+        }
+
+        .sp-img_area .slick-vertical {
+            -webkit-flex-basis: 20%;
+            -ms-flex-preferred-size: 20%;
+            flex-basis: 29%;
+            max-width: 20%;
+            padding: 0;
+            margin-top: 0;
+            margin-right: 10px;
+        }
+
+        .sp-img_area .slider-for {
+
+            -webkit-flex-basis: 90%;
+            -ms-flex-preferred-size: 90%;
+            flex-basis: 90%;
+            max-width: 90%;
+            padding-left: 20px;
+        }
+
+
+        .sp-img_area .slick-vertical img {
+            border: 1px solid #e5e5e5;
+            padding: 10px 0;
+            opacity: 0.8;
+            filter: grayscale(0.5);
+            cursor: pointer;
+        }
+
+        .sp-img_area .slick-vertical .slick-current img {
+            border-color: #c1a69a;
+            opacity: 1;
+            filter: grayscale(0);
+            cursor: pointer;
+
+        }
+
+
+        .slick-prev {}
+
+        .slick-arrow {
+            background: #c1a69a;
+            border: 0px;
+            color: #ffffff;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 100%;
+            font-size: 20px;
+        }
+
+
+
+
+        .zoom img {
+            display: block;
+            cursor: crosshair;
+        }
+
+        .zoom img::selection {
+            background-color: transparent;
+        }
+
+
+        .slider-nav .icons {
+            position: absolute;
+            z-index: 999;
+            font-size: 47px;
+            margin: 25px 10px;
+            color: #4e4039;
+            opacity: 0.5;
+            cursor: pointer;
+
+        }
+
+        h1.title {
+            font-size: 1.6em;
+        }
+
+        .product-description input[type="radio"]+label {
+            margin-left: 0px;
+            cursor: pointer;
+            float: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-description input[type="radio"] {
+            left: -9999px;
+            position: absolute;
+        }
+
+        .product-description label {
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            /*                        line-height: 60px;*/
+            font-size: 10px;
+            padding: 1px 1px 1px 1px;
+            border: 0px solid #fff;
+            width: 65px;
+            height: 65px;
+            color: #fff;
+        }
+
+        .product-description label span {
+            line-height: 1em;
+            padding-top: 23px;
+        }
+
+        .product-description label {
+            background-color: #fff;
+            color: #191A19 !important;
+            border: 2px solid #fff;
+            border-radius: 5px;
+        }
+
+        .product-description label:hover,
+        .product-description input[type="radio"]:checked+label {
+            font-weight: normal;
+            border: 2px solid #292323;
+            border-radius: 5px;
+            outline: none !important;
+            transition: all 0.5s;
+        }
+
+        .product-description label span {
+            width: 58px;
+            height: 58px;
+            opacity: 1;
+            transition: all 0.5s;
+            display: block;
+            border-radius: 3px;
+        }
+
+        .product-description label:hover span {
+            opacity: 1.0;
+            transition: all 0.5s;
+        }
+
+        .product-description label:hover span .prod-options-descr {
+            display: block !important
+        }
+
+        .prod-options-descr {
+            display: none;
+            color: #333;
+            padding: 8px 22px;
+            background-color: #fff;
+            border: 1px solid #d2d2d2;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
+            border-radius: 7px;
+            position: relative;
+            top: 19px;
+            left: 0;
+            width: 225px;
+            z-index: 2;
+            margin-left: -75px;
+        }
+
+        .prod-options-descr .image {
+            margin-bottom: 22px;
+            position: relative;
+        }
+
+        .prod-options-descr img {
+            width: 191px;
+            height: 191px;
+        }
+
+        .prod-options-descr:before {
+            top: -14px;
+            border-bottom: 13px solid #d2d2d2;
+        }
+
+
+
+        .prod-options-descr .image:before {
+            display: block;
+            content: '';
+            width: 219px;
+            height: 221px;
+            position: absolute;
+            top: 1;
+            left: -17px;
+            background-image: url(/img/c_before.png);
+        }
+
+
+
+        .product-description {
+            display: block;
+        }
+
+        .option {
+            margin-right: 5px;
+            display: inline-block;
+            ;
+        }
+    </style>
+
+
+
+    <section class="container  my-5 product-single ">
+        <div class="row">
+            <!--/img/product/pr0-1.jpg-->
+
+
+            <div class="col-8">
+                <div class="sp-img_area g-3 overflow-hidden h-md-250 position-relativ">
+
+
+
+
+                    <div class="slider slider-nav">
+                        <div>
+                            <img src="/img/product2/velvet/000/1+nozka+b.jpg" class="tovar img-fluid" alt="">
+                        </div>
+                        <div>
+                            <img src="/img/product2/velvet/000/2+nozka+b.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div><i class='icons bx bx-play-circle'></i>
+                            <img src="/img/product/pr1-1.jpg" class="  img-fluid" alt="">
+                        </div>
+                        <div><i class='icons bx bx-rotate-right'></i>
+                            <img src="/img/product/pr2-1.jpg" class="  img-fluid" alt="">
+                        </div>
+                    </div>
+
+
+                    <style>
+                        .images-group img.img-origin {
+                            position: relative;
+                            z-index: 2;
+                        }
+
+                        .product-main-slider li img {
+                            width: 100%;
+                        }
+
+                        .images-group img.img-mask {
+                            position: absolute;
+                            z-index: 3;
+                            max-width: 100%;
+                            width: 100%;
+                            top: 0;
+                            left: 0;
+                        }
+
+                        .images-group .canvas-mask {
+                            position: absolute;
+                            z-index: 4;
+                            max-width: 100%;
+                            width: 100%;
+                            top: 0;
+                            left: 0;
+                        }
+
+                        .images-group .canvas-mask {
+                            opacity: .95;
+                            filter: brightness(.9) brightness(.9) contrast(1.3) contrast(1.3) saturate(150%);
+                        }
+                    </style>
+                    <!--                    ЗАГЛУШИТИ КОЛИ БУДЕ ГОТОВО-->
+                    <canvas id="canvas" class="tovar img-origin img-fluid " width="1900" height="1900" style="display:none"></canvas>
+
+                    <div class="slider slider-for" id="tovarSingle">
+                        <figure class="zoom images-group" id="testCanvas">
+                            <!--                            <img src="/img/product2/velvet/000/1+nozka+b.jpg" class="tovar img-fluid " alt="">-->
+                        </figure>
+                        <div class="zoom">
+                            <img src="/img/product2/velvet/000/2+nozka+b.jpg" class="img-fluid " alt="">
+
+                        </div>
+                        <div>
+                            <video class="img-fluid" autoplay muted loop>
+                                <source src="/img/product/film/film.mp4" type="video/mp4">
+                                <source src="/img/product/film/film.mp4" type="video/ogg">
+                            </video>
+                        </div>
+                        <div class="zoom">
+                            <img src="/img/product/gif/Joy_opens.gif" class="img-fluid " alt="">
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                            $('.slider-for').slick({
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                arrows: false,
+                                fade: true,
+                                asNavFor: '.slider-nav'
+                            });
+                            $('.slider-nav').slick({
+                                prevArrow: '<button type="button" class="slick-prev"><i class="bx bx-chevron-up"></i></button>',
+                                nextArrow: '<button type="button" class="slick-prev"><i class="bx bx-chevron-down"></i></button>',
+                                slidesToShow: 10,
+                                slidesToScroll: 1,
+                                asNavFor: '.slider-for',
+                                dots: false,
+                                infinite: false,
+                                focusOnSelect: true,
+                                arrows: true,
+                                adaptiveHeight: true,
+                                vertical: true,
+                                verticalSwiping: true,
+                                responsive: [{
+                                    breakpoint: 992,
+                                    settings: {
+                                        slidesToShow: 3,
+                                        vertical: true,
+                                        verticalSwiping: true,
+                                    }
+                                }, ],
+                            });
+
+
+
+                            $('.zoom').zoom(); //загрузка мадуля при старті сторінки
+
+
+                            //default
+                            let tkaninaCode = $("#colors .option input ").first().val().replace(/\d+/g, ''),
+                                colorCode = $("#colors .option input ").first().val().replace(/[^0-9]/gi, ''),
+                                numImg = '1',
+                                url,
+                                nozki = $("#nozki .option input ").first().val();
+                            //numImg взяти з активної .slick-track   яка активна slick-current
+                            console.log(tkaninaCode, colorCode, numImg, nozki)
+
+
+                            $("#nozki .option input ").click(function() {
+                                nozki = $(this).val(); //берем кодножки (1:1 назва файла і код)кольору 
+
+
+                                console.log(nozki);
+
+
+                                imgUrl(); //ф-ція прогрузки url
+
+
+                                //загрузка по кліку zoom reset
+                                setTimeout(loadZoom, 10);
+
+                                function loadZoom() {
+                                    $('.zoom').trigger('zoom.destroy');
+                                    $('.zoom').zoom();
+                                }
+                            })
+
+
+
+                            $("#colors .option input ").click(function() {
+                                colorCode = $(this).val().replace(/[^0-9]/gi, ''); //берем код кольору 
+                                tkaninaCode = $(this).val().replace(/\d+/g, ''); //берем текст колекція тканини 
+                                //                                    console.log($('single-color').index( this ));
+                                imgUrl(tkaninaCode, colorCode); //ф-ція прогрузки url
+                                //загрузка по кліку zoom reset
+                                setTimeout(loadZoom, 10);
+
+                                function loadZoom() {
+                                    $('.zoom').trigger('zoom.destroy');
+                                    $('.zoom').zoom();
+                                }
+                            })
+
+
+
+
+
+
+
+
+                            function imgUrl(t, c, n) {
+                                url = ('/img/product2/' + tkaninaCode + '/' + colorCode + '/1+' + nozki + '.jpg').replace(/\s+/g, '');
+
+
+                                console.log(url)
+                                $('img.tovar').attr('src', url);
+
+                            }
+
+
+                        });
+                    
+                        url2 = '/img/product2/velvet/000/1+nozka+b.jpg';
+                        
+                        // just the assets loader
+                        (async () => {
+                            const [face, border, back] = await Promise.all(
+                                [
+                                    '/img/options/mask/pinesca.png',
+                                    url2, // already wth transparency
+                                    url2
+                                ].map(url => {
+                                    const img = new Image();
+                                    img.src = url;
+                                    return new Promise(res => {
+                                        img.onload = e => res(img);
+                                    });
+                                })
+                            );
+
+
+                            // ctx = document.getElementById('canvas').getContext('2d');
+                            const canvas = document.getElementById("canvas")
+                            const ctx = canvas.getContext("2d");
+
+                            ctx.drawImage(border, 0, 0);
+
+
+                             await wait(1500); // draw the face only where we already have the border drawn
+                            ctx.globalCompositeOperation = 'source-in'; //source-in
+
+                            ctx.drawImage(face, 0, 0);
+
+
+                             await wait(1500); // draw the background behind
+                            ctx.globalCompositeOperation = 'destination-over';
+                            ctx.drawImage(back, 0, 0, );
+
+                            // reset
+                            ctx.globalCompositeOperation = 'source-over';
+
+                            var target = new Image();
+                            target.src = canvas.toDataURL('image/jpeg', 0.9); //type + encode quality 
+                            document.getElementById('testCanvas').appendChild(target).classList.add("img-fluid");
+                        })();
+
+
+
+ 
+
+
+
+                         function wait(ms) { return new Promise(res => setTimeout(res, ms)) }
+                    </script>
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-4">
+
+                <h1 class="text-dark title">Łóżko kontynentalne na wysokich nóżkach z pojemnikiem «AMORE»</h1>
+                <div class="price my-2">4 499.00 zł</div>
+                <div class=" my-2">
+                    <div class="text-sm">Powierzchnia spania:</div>
+                    <button type="button" class="btn btn-outline-secondary   border-2  " value="">140x200</button>
+                    <button type="button" class="btn btn-outline-secondary border-2  " value="">160x200</button>
+                    <button type="button" class="btn btn-outline-secondary border-2   active " value="">180x200</button>
+                    <button type="button" class="btn btn-outline-secondary border-2   " value="">200x200</button>
+                </div>
+                <div class=" my-3">
+                    <div class="text-sm">Tkanina:</div>
+                    <button type="button" class="btn btn-outline-secondary border-2  active btn-sm" value="">Amazing Velvet</button>
+                    <button type="button" class="btn btn-outline-secondary border-2  btn-sm" value="">Fiu Fiu</button>
+                    <button type="button" class="btn btn-outline-secondary border-2   btn-sm" value="">Boucle</button>
+                    <button type="button" class="btn btn-outline-secondary border-2    btn-sm" value="">mat Velvet</button>
+                </div>
+
+
+
+
+
+                <div class=" product-description options my-3" id="colors">
+                    <div class="text-sm">Color:</div>
+
+                    <div class="option single-color">
+                        <input type="radio" value="Velvet 000" id="Velvet 000" name="options[colorW]" />
+                        <label for="Velvet 000">
+                            <span data-color="Velvet" style="background: url(/img/product2/velvet/000.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/velvet/000.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Velvet 000</div>
+                                </div>
+                            </span>
+
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Velvet 001" id="Velvet 001" name="options[colorW]" />
+                        <label for="Velvet 001">
+                            <span data-color="Velvet" style="background: url(/img/product2/velvet/001.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/velvet/001.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Velvet 001</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Velvet 002" id="Velvet 002" name="options[colorW]" />
+                        <label for="Velvet 002">
+                            <span data-color="Velvet" style="background: url(/img/product2/velvet/002.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/velvet/002.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Velvet 002</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Velvet 003" id="Velvet 003" name="options[colorW]" />
+                        <label for="Velvet 003">
+                            <span data-color="Velvet" style="background: url(/img/product2/velvet/003.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/velvet/003.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Velvet 003</div>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <br>
+                    <div class="option single-color">
+                        <input type="radio" value="Tkanina 000" id="Tkanina 000" name="options[colorW]" />
+                        <label for="Tkanina 000">
+                            <span data-color="Tkanina" style="background: url(/img/product2/tkanina/000.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/tkanina/000.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Tkanina 000</div>
+                                </div>
+                            </span>
+
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Tkanina 001" id="Tkanina 001" name="options[colorW]" />
+                        <label for="Tkanina 001">
+                            <span data-color="Tkanina" style="background: url(/img/product2/tkanina/001.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/tkanina/001.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Tkanina 001</div>
+                                </div>
+                            </span>
+
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Tkanina 002" id="Tkanina 002" name="options[colorW]" />
+                        <label for="Tkanina 002">
+                            <span data-color="Tkanina" style="background: url(/img/product2/tkanina/002.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/tkanina/002.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Tkanina 002</div>
+                                </div>
+                            </span>
+
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Tkanina 003" id="Tkanina 003" name="options[colorW]" />
+                        <label for="Tkanina 003">
+                            <span data-color="Tkanina" style="background: url(/img/product2/tkanina/003.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/tkanina/003.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Tkanina 003</div>
+                                </div>
+                            </span>
+
+                        </label>
+                    </div>
+                    <br>
+                    <div class="option single-color">
+                        <input type="radio" value="Leather 000" id="Leather 000" name="options[colorW]" />
+                        <label for="Leather 000">
+                            <span data-color="Leather" style="background: url(/img/product2/leather/000.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/leather/000.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Leather 000</div>
+                                </div>
+                            </span>
+
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Leather 001" id="Leather 001" name="options[colorW]" />
+                        <label for="Leather 001">
+                            <span data-color="Leather" style="background: url(/img/product2/leather/001.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/leather/001.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Leather 001</div>
+                                </div>
+                            </span>
+
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Leather 002" id="Leather 002" name="options[colorW]" />
+                        <label for="Leather 002">
+                            <span data-color="Leather" style="background: url(/img/product2/leather/002.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/leather/002.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Leather 002</div>
+                                </div>
+                            </span>
+
+                        </label>
+                    </div>
+                    <div class="option single-color">
+                        <input type="radio" value="Leather 003" id="Leather 003" name="options[colorW]" />
+                        <label for="Leather 003">
+                            <span data-color="Leather" style="background: url(/img/product2/leather/003.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/product2/leather/003.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Leather 003</div>
+                                </div>
+                            </span>
+
+                        </label>
+                    </div>
+                </div>
+
+                <div class=" product-description options my-3" id="nozki">
+                    <div class="text-sm">Zestaw nózek:</div>
+
+                    <div class="option nozki-color">
+                        <input type="radio" value="nozka+b" id="noga black" name="options[noga]" />
+                        <label for="noga black">
+                            <span style="background: url(/img/options/nozki/nozka+b.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/options/nozki/nozka+b.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">NOGA MEBLOWA GWIAZDA 13,5 CM, CZARNY MAT</div>
+                                </div>
+                            </span>
+
+                        </label>
+                    </div>
+                    <div class="option nozki-color">
+                        <input type="radio" value="nozka+g" id="noga gold" name="options[noga]" />
+                        <label for="noga gold">
+                            <span style="background: url(/img/options/nozki/nozka+g.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/options/nozki/nozka+g.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">NOGA MEBLOWA GWIAZDA 13,5 CM, Złoty</div>
+                                </div>
+                            </span>
+
+                        </label>
+                    </div>
+                    <div class="option nozki-color">
+                        <input type="radio" value="nozka+n" id="noga nikel" name="options[noga]" />
+                        <label for="noga nikel">
+                            <span style="background: url(/img/options/nozki/nozka+n.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/options/nozki/nozka+n.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">NOGA MEBLOWA GWIAZDA 13,5 CM, NIKIEL POŁYSK</div>
+                                </div>
+                            </span>
+
+                        </label>
+                    </div>
+                    <div class="option nozki-color">
+                        <input type="radio" value="wood+g" id="wood" name="options[noga]" />
+                        <label for="wood">
+                            <span style="background: url(/img/options/nozki/wood.jpg) center/cover;">
+                                <div class="prod-options-descr">
+                                    <div class="image">
+                                        <img src="/img/options/nozki/wood.jpg" alt=" ">
+                                    </div>
+                                    <div class="titleOp">Noga bukowa surowa 60/30 mm, H-250</div>
+                                </div>
+                            </span>
+
+                        </label>
+                    </div>
+                </div>
+
+
+
+
+                <div class=" my-5">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta necessitatibus culpa dignissimos nobis, delectus inventore est in porro harum ducimus? Distinctio consequatur iste incidunt dicta, quo quasi, repellat pariatur est.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- @import "footer.html" -->
+</body>
+
+</html>

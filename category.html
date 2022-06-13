@@ -1,0 +1,1539 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AltaBeds</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href='/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+</head>
+
+<body>
+<style>
+    .preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10000;
+  visibility: hidden;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  margin: 0;
+background-image: radial-gradient(circle, #fdfcfb 0%, #e2d1c3 100%);
+/*  background-color: #10131a;*/
+  transition: opacity 400ms ease-in-out, visibility 0s 400ms;
+}
+    
+    .circles-group::before {
+    content: " ";
+    width: 160px;
+    height: 60px;
+    background: url(img/logo.svg) no-repeat;
+    position: absolute;
+    margin: -86px 0px 5px -51px;
+/*
+         -webkit-animation: stretchdelay 0.71s infinite ease-in-out;
+  animation: stretchdelay 0.71s infinite ease-in-out;
+*/
+   
+    }
+
+.show-preloader {
+  visibility: visible;
+  opacity: 1;
+}
+
+.circle {
+  background: radial-gradient(circle, #fff 0%, #c1a69a 30%); /*#c1a69a*/
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-animation: stretchdelay 0.7s infinite ease-in-out;
+  animation: stretchdelay 0.7s infinite ease-in-out;
+}
+
+.preloader .circle:nth-child(1) {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+
+.preloader .circle:nth-child(2) {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+.preloader .circle:nth-child(3) {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+
+ 
+
+@keyframes stretchdelay {
+  0%, 
+  40%,
+  100% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+  }
+  20% {
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+  }
+}</style>
+<figure class="preloader" id="preloader">
+  <div class="circles-group">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+ 
+  </div>
+</figure>
+<div class="background"></div>
+
+<script>
+    
+const preloader = document.querySelector('#preloader');
+
+preloader.classList.add('show-preloader');
+
+window.addEventListener('load', function () {
+	setTimeout(function(){
+    	preloader.classList.remove('show-preloader');
+	},0);
+});    
+</script>
+<!--PRELOADER-->
+    
+ <nav class="d-none p-2 col-12 text-white  text-center" style="background: linear-gradient(rgb(227, 177, 157) 0%, rgb(217, 171, 119) 100%)"  >
+    <div class="container-fluid "  style="border: 1px solid rgb(255, 255, 255); ">
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center   my-2">
+        <li class="nav-item"><a href="#" class="nav   text-white   " style="text-decoration:none">  
+        Zarejestruj sie i otrzymaj voucher 50 zł!</a></li>
+      </ul>
+      <!--ul class="nav">
+        <li class="nav-item"><a href="#" class="nav-link text-white px-2">tel: +48 777-777-777</a></li>
+      </ul-->
+    </div>
+  </nav>
+     
+      
+        <nav class="py-2 bg-light border-bottom">
+     <div class="container d-flex flex-wrap">
+
+
+<!--
+         <div class="nav col-4">
+                 <style>
+                     .map {position: relative;
+                        top: -6px; font-size: 14px!important;
+                     }
+                 </style>
+                 <ul class=" list-inline ps-0 mb-0">
+                     <li class="list-inline-item"> 
+                         <i class="bx bx-map  rounded-circle border border-secondary p-1 "></i>
+                             <a class="btn map" target="_blank" href="https://www.google.com/maps/place/JohnsonStyle+Sp.z.o.o/@52.1616071,20.9273879,15z/data=!4m2!3m1!1s0x0:0x12e8844762fb5cb2?sa=X&ved=2ahUKEwi4mJj5gev3AhXAQvEDHV9qBYkQ_BJ6BAhAEAU">Aleja Krakowska 97, 05-090 Raszyn</a>
+                     </li>
+                     <li class="list-inline-item">
+                         <i class="bx bx-phone rounded-circle border border-secondary p-1  "></i>
+                         <a class="btn map" href="tel:+48 999 777 777">+48 777-777-777 </a>
+                                                                </li>
+                 </ul>
+             </div>
+         </div>
+-->
+
+
+
+<!--offset-4-->
+         <a href="/" class=" offset-lg-4 col-lg-4 col-12 d-flex justify-content-center  ">
+             <img src="/img/logo.svg" width="200">
+         </a>
+
+         <div class="col-lg-4 col-12 nav d-flex justify-content-lg-end justify-content-center ">
+
+             <div class="d-flex justify-content-center h-100  ">
+                 <div class="searchbar">
+                     <input class="search_input" type="text" name="" placeholder="Szukaj...">
+                     <a href="#" class="search_icon"><i class="bx bx-search"></i></a>
+                 </div>
+             </div>
+
+
+
+             <!--
+             <a href="#" class="btn btn-outline-dark p-2 d-none  d-sm-block" target="_blank" rel="noopener">
+                 <i class="bx bx-search   "></i>
+             </a>
+-->
+             <button class="btn   p-2  ms-1  " target="_blank" rel="noopener">
+                 <i class="bx bx-heart    "></i>
+             </button>
+             <button class="btn    p-2 mx-1  " target="_blank" rel="noopener">
+                 <i class="bx bx-user   "></i>
+             </button>
+             <button id="myCartIco" class="btn  p-2  " target="_blank" rel="noopener">
+                 <i class="bx bx-cart   "></i>
+             </button>
+
+             <div id="myCart" class="sidenav">
+                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                 <a href="#"> <i class="bx bx-cart   "></i> - Tovar #1 - 5999 zl</a>
+                 <a href="#"> <i class="bx bx-cart   "></i> - Tovar #2 - 4999 zl</a>
+                 <a href="#"> <i class="bx bx-cart   "></i> - Tovar #3 - 3999 zl</a>
+                 <a href="#"> <i class="bx bx-cart   "></i> - Tovar #4 - 7050 zl</a>
+             </div>
+
+
+
+         </div>
+     </div>
+ </nav>
+
+
+ <header id="navbar-sticky" class=" mb-auto navbar navbar-expand-lg navbar-light bg-light ">
+     <div class="container px-0">
+         <div id="navbarNav" class="offcanvas offcanvas-end">
+             <div class="offcanvas-header border-bottom">
+                 <h5 class="offcanvas-title">Menu</h5>
+                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+             </div>
+             <div class="offcanvas-body mx-auto flex-column">
+                 <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+
+                     <li class="nav-item">
+                         <a href="#" class="nav-link">Nowości</a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="category.html" class="nav-link">Bestsellery</a>
+                     </li>
+                     <li class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Łóżka</a>
+                         <div class="dropdown-menu rounded-0 border-0 px-3 py-4" style="min-width: 22rem;">
+                             <div class="d-lg-flex ">
+                                 <div class="mega-dropdown-column">
+                                     <h6 class="px-3 mb-2">Category #1</h6>
+                                     <ul class="list-unstyled mb-3">
+                                         <li><a href="#" class="dropdown-item py-1">Bestsellery sofa</a></li>
+                                         <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
+                                         <li><a href="#" class="dropdown-item py-1">Bestsellery sofa</a></li>
+                                         <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
+
+                                     </ul>
+
+                                 </div>
+                                 <div class="mega-dropdown-column">
+                                     <h6 class="px-3 mb-2">Category #2</h6>
+                                     <ul class="list-unstyled mb-3">
+                                         <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
+                                         <li><a href="#" class="dropdown-item py-1">Bestsellery sofa</a></li>
+                                         <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
+                                         <li><a href="#" class="dropdown-item py-1"> Bestsellery sofa</a></li>
+
+                                     </ul>
+                                 </div>
+                                 <div class="mega-dropdown-column px-2 ">
+
+                                     <img src="/img/white_Corona4-new_velvet2.jpg" alt="" style="max-width: 250px">
+<!--                                     <img src="https://via.placeholder.com/250x150/FF0000/FFFFFF" alt="">-->
+
+                                 </div>
+                             </div>
+                         </div>
+                     </li>
+                     <li class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown">Wezgłowia</a>
+                         <ul class="dropdown-menu rounded-0 border-0">
+                             <li><a href="#" class="dropdown-item">subCategory 3/1</a></li>
+
+                         </ul>
+                     </li>
+                     <li class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Materace</a>
+                         <ul class="dropdown-menu rounded-0 border-0">
+                             <li><a href="#" class="dropdown-item">subCategory 3/1</a></li>
+
+                         </ul>
+                     </li>
+                     <li class="nav-item">
+                         <a href="#" class="nav-link">Sofy</a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="#" class="nav-link">Tekstylia</a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="#" class="nav-link">Inspiracje</a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="#" class="nav-link">Szybka dostawa</a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="#" class="nav-link">Okazje</a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="#" class="nav-link">Strefa Architekta</a>
+                     </li>
+
+                 </ul>
+             </div>
+
+         </div>
+
+         <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+         <!--
+        <a href="#" class="btn btn-outline-dark btn-sm " target="_blank" rel="noopener">
+            <i class="bx bx-heart fs-6  "></i>
+
+        </a>
+
+        <a href="#" class="btn btn-outline-dark btn-sm  mx-1" target="_blank" rel="noopener">
+            <i class="bx bx-user fs-6  "></i>
+
+        </a>
+        <a href="#" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">
+            <i class="bx bx-cart fs-6 "></i>
+
+        </a>
+-->
+     </div>
+ </header>
+
+
+
+
+
+
+    <section class="container my-5 product-category">
+        <div class="row">
+
+
+            <nav class="col-4 pt-3" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item  text-sm"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="category.html">Łóżka</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Collection Della</li>
+                </ol>
+            </nav>
+            <h1 class="col-8  d-flex align-items-end flex-column" style="font-weight: 100">Category Łóżka </h1>
+            <hr>
+
+
+            <div class="container ">
+                <div class="row">
+                    <div class="col-3   border border-white filter">
+
+
+<!--                        <h3 class=" text-uppercase mb-3 lead-h-text  ">Filter:</h3>-->
+
+                        <div class="accordion accordion-flush my-3" id="accordionFilter" style="margin-right:20px">
+
+
+                            <div class="accordion-item pb-4 mb-2">
+                             
+ 
+                               
+                                    <div class="accordion-body">
+
+                                        <h3 class="h6">Cena</h3>
+
+
+                                        <div class="range-slider" data-start-min="2300" data-start-max="7700" data-min="50" data-max="10000" data-step="20">
+                                            <div class="range-slider-ui"></div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="w-50 pe-2">
+                                                    <div class="input-group">
+                                                        <input class="form-control range-slider-value-min" type="text">
+<!--                                                        <span class="input-group-text " style="background:#fff">zł</span>-->
+                                                    </div>
+                                                </div>
+                                                <div class="text-muted">&mdash;</div>
+                                                <div class="w-50 ps-2">
+                                                    <div class="input-group">
+                                                        <input class="form-control range-slider-value-max" type="text">
+<!--                                                        <span class="input-group-text  " style="background:#fff">zł</span>-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js"></script>
+                                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.css">
+                                        <script>
+                                            /**
+                                             * Range slider
+                                             * @requires https://github.com/leongersen/noUiSlider
+                                             */
+
+
+                                            var rangeSlider = function() {
+                                                var rangeSliderWidget = document.querySelectorAll('.range-slider');
+
+                                                var _loop2 = function _loop2(i) {
+                                                    var rangeSlider = rangeSliderWidget[i].querySelector('.range-slider-ui'),
+                                                        valueMinInput = rangeSliderWidget[i].querySelector('.range-slider-value-min'),
+                                                        valueMaxInput = rangeSliderWidget[i].querySelector('.range-slider-value-max');
+                                                    var options = {
+                                                        dataStartMin: parseInt(rangeSliderWidget[i].dataset.startMin, 10),
+                                                        dataStartMax: parseInt(rangeSliderWidget[i].dataset.startMax, 10),
+                                                        dataMin: parseInt(rangeSliderWidget[i].dataset.min, 10),
+                                                        dataMax: parseInt(rangeSliderWidget[i].dataset.max, 10),
+                                                        dataStep: parseInt(rangeSliderWidget[i].dataset.step, 10)
+                                                    };
+                                                    var start = options.dataStartMax ? [options.dataStartMin, options.dataStartMax] : [options.dataStartMin],
+                                                        connect = options.dataStartMax ? true : 'lower';
+                                                    noUiSlider.create(rangeSlider, {
+                                                        start: start,
+                                                        connect: connect,
+                                                        step: options.dataStep,
+                                                        tooltips: true,
+                                                        range: {
+                                                            'min': options.dataMin,
+                                                            'max': options.dataMax
+                                                        },
+                                                        format: {
+                                                            to: function to(value) {
+                                                                return parseInt(value, 10) + ' zł';
+                                                            },
+                                                            from: function from(value) {
+                                                                return Number(value);
+                                                            }
+                                                        }
+                                                    });
+                                                    rangeSlider.noUiSlider.on('update', function(values, handle) {
+                                                        var value = values[handle];
+                                                        value = value.replace(/\D/g, '');
+
+                                                        if (handle) {
+                                                            if (valueMaxInput) {
+                                                                valueMaxInput.value = Math.round(value);
+                                                            }
+                                                        } else {
+                                                            if (valueMinInput) {
+                                                                valueMinInput.value = Math.round(value);
+                                                            }
+                                                        }
+                                                    });
+
+                                                    if (valueMinInput) {
+                                                        valueMinInput.addEventListener('change', function() {
+                                                            rangeSlider.noUiSlider.set([this.value, null]);
+                                                        });
+                                                    }
+
+                                                    if (valueMaxInput) {
+                                                        valueMaxInput.addEventListener('change', function() {
+                                                            rangeSlider.noUiSlider.set([null, this.value]);
+                                                        });
+                                                    }
+                                                };
+
+                                                for (var i = 0; i < rangeSliderWidget.length; i++) {
+                                                    _loop2(i);
+                                                }
+                                            }();
+                                        </script>
+
+                                        <style>
+                                            .range-slider-ui {
+                                                height: 0.25rem;
+                                                margin-top: 3rem;
+                                                margin-bottom: 1.75rem;
+                                                border: 0;
+                                                background-color: #e2e0e7;
+                                                box-shadow: none;
+                                            }
+
+                                            .range-slider-ui .noUi-connect {
+                                                background-color: #c1a69a;
+                                            }
+
+                                            .range-slider-ui .noUi-handle {
+                                                top: 50%;
+                                                width: 1.125rem;
+                                                height: 1.125rem;
+                                                margin-top: -0.511875rem;
+                                                border: 0;
+                                                border-radius: 50%;
+                                                background-color: #c1a69a;
+                                                box-shadow: none;
+                                            }
+
+                                            .range-slider-ui .noUi-handle::before {
+                                                position: absolute;
+                                                left: 50%;
+                                                top: 50%;
+                                                width: 0.6435rem;
+                                                height: 0.6435rem;
+                                                margin-top: -0.32175rem;
+                                                margin-left: -0.32175rem;
+                                                border-radius: 50%;
+                                                background-color: #fff;
+                                                content: "";
+                                            }
+
+                                            .range-slider-ui .noUi-handle::after {
+                                                display: none;
+                                            }
+
+                                            .range-slider-ui .noUi-handle:focus {
+                                                outline: none;
+                                            }
+
+                                            .range-slider-ui .noUi-marker-normal {
+                                                display: none;
+                                            }
+
+                                            .range-slider-ui .noUi-marker-horizontal.noUi-marker {
+                                                width: 1px;
+                                                background-color: #dfd9e7;
+                                            }
+
+                                            .range-slider-ui .noUi-marker-horizontal.noUi-marker-large {
+                                                height: 0.75rem;
+                                            }
+
+                                            .range-slider-ui .noUi-value {
+                                                padding-top: 0.125rem;
+                                                color: #666276;
+                                                font-size: 0.875rem;
+                                            }
+
+                                            .range-slider-ui .noUi-tooltip {
+                                                padding: 0.25rem 0.5rem;
+                                                border: 1px solid #efecf3;
+                                                border-radius: 50rem;
+                                                background-color: #fff;
+                                                color: #454056;
+                                                font-size: 0.75rem;
+                                                line-height: 1.2;
+                                                box-shadow: 0 0.125rem 0.125rem -0.125rem rgba(31, 27, 45, 0.08),
+                                                    0 0.25rem 0.75rem rgba(31, 27, 45, 0.08);
+                                            }
+
+                                            html:not([dir="rtl"]) .range-slider-ui.noUi-horizontal .noUi-handle {
+                                                right: -0.5625rem;
+                                            }
+
+                                            .range-slider-light .range-slider-ui {
+                                                background-color: rgba(255, 255, 255, 0.2);
+                                            }
+                                        </style>
+
+
+                                    </div>
+                               
+                            </div>
+
+
+
+                            <div class="accordion-item pb-4 mb-2">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed h6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        Powierzchnia spania:
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFilter">
+                                    <div class="accordion-body">
+
+
+
+                                        <style>
+                                            .overflow-auto::-webkit-scrollbar-track {
+
+                                                border-radius: 10px;
+                                                background-color: #F5F5F5;
+                                            }
+
+                                            .overflow-auto::-webkit-scrollbar {
+                                                width: 3px;
+                                                background-color: #F5F5F5;
+                                            }
+
+                                            .overflow-auto::-webkit-scrollbar-thumb {
+                                                border-radius: 10px;
+
+                                                background-color: #c1a69a;
+                                            }
+
+                                            .form-check-input:checked[type=checkbox] {
+                                                background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fd5631' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e) !important;
+                                            }
+
+                                            .form-check-input[type=checkbox] {
+                                                border-radius: 0.1875em;
+                                            }
+
+                                            .form-check-input:checked {
+                                                background-color: #c1a69a;
+                                                border-color: #c1a69a;
+                                            }
+                                            
+                                            .accordion-item {
+    background-color: #fff;
+    border: 1px solid #f2f2f2;
+}
+                                        </style>
+
+
+                                        <div class="overflow-auto" id="style-1" style="height: 11rem;">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="parking">
+                                                <label class="form-check-label fs-sm" for="parking">140 x 200 (cm)</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="restaurant">
+                                                <label class="form-check-label fs-sm" for="restaurant">160 x 200 (cm)</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="pet-friendly">
+                                                <label class="form-check-label fs-sm" for="pet-friendly">180 x 200 (cm)</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="room-service" checked>
+                                                <label class="form-check-label fs-sm" for="room-service">200 x 200 (cm)</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="fitness-center">
+                                                <label class="form-check-label fs-sm" for="fitness-center">140 x 200 (cm)</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="free-wifi" checked>
+                                                <label class="form-check-label fs-sm" for="free-wifi">160 x 200 (cm)</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="spa-lounge">
+                                                <label class="form-check-label fs-sm" for="spa-lounge">180 x 200 (cm)</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="bar">
+                                                <label class="form-check-label fs-sm" for="bar">200 x 200 (cm)</label>
+                                            </div>
+
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item pb-4 mb-2">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button  h6 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Pinezka:
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionFilter">
+                                    <div class="accordion-body text-center">
+                                        <style>
+                                            .switchToggle input[type=checkbox] {
+                                                height: 0;
+                                                width: 0;
+                                                visibility: hidden;
+                                                position: absolute;
+                                            }
+
+                                            .switchToggle label {
+                                                cursor: pointer;
+                                                text-indent: -9999px;
+                                                width: 70px;
+                                                max-width: 70px;
+                                                height: 30px;
+                                                background: #d1d1d1;
+                                                display: inline-block;
+                                                border-radius: 100px;
+                                                position: relative;
+                                            }
+
+                                            .switchToggle label:after {
+                                                content: '';
+                                                position: absolute;
+                                                top: 2px;
+                                                left: 2px;
+                                                width: 26px;
+                                                height: 26px;
+                                                background: #fff;
+                                                border-radius: 90px;
+                                                transition: 0.3s;
+                                            }
+
+                                            .switchToggle input:checked+label,
+                                            .switchToggle input:checked+input+label {
+                                                background: #c1a69a;
+                                            }
+
+                                            .switchToggle input+label:before,
+                                            .switchToggle input+input+label:before {
+                                                content: 'No';
+                                                position: absolute;
+                                                top: 3px;
+                                                left: 35px;
+                                                width: 26px;
+                                                height: 26px;
+                                                border-radius: 90px;
+                                                transition: 0.3s;
+                                                text-indent: 0;
+                                                color: #fff;
+                                            }
+
+                                            .switchToggle input:checked+label:before,
+                                            .switchToggle input:checked+input+label:before {
+                                                content: 'Yes';
+                                                position: absolute;
+                                                top: 3px;
+                                                left: 13px;
+                                                width: 26px;
+                                                height: 26px;
+                                                border-radius: 90px;
+                                                transition: 0.3s;
+                                                text-indent: 0;
+                                                color: #fff;
+                                            }
+
+                                            .switchToggle input:checked+label:after,
+                                            .switchToggle input:checked+input+label:after {
+                                                left: calc(100% - 2px);
+                                                transform: translateX(-100%);
+                                            }
+
+                                            .switchToggle label:active:after {
+                                                width: 60px;
+                                            }
+
+                                            .toggle-switchArea {
+                                                margin: 10px 0 10px 0;
+                                            }
+                                        </style>
+                                        <div class="outerDivFull">
+                                            <div class="switchToggle">
+                                                <input type="checkbox" id="switch" checked>
+                                                <label for="switch">Toggle</label>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item pb-4 mb-2">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button  h6 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Tkanina
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionFilter">
+                                    <div class="accordion-body">
+
+
+
+                                        <style>
+                                            .funkyradio label {
+                                                width: 100%;
+                                                border-radius: 0px;
+                                                border: 0px solid #D1D3D4;
+                                                font-weight: normal;
+                                            }
+
+                                            .funkyradio input[type="radio"]:empty,
+                                            .funkyradio input[type="checkbox"]:empty {
+                                                display: none;
+                                            }
+
+                                            .funkyradio input[type="radio"]:empty~label,
+                                            .funkyradio input[type="checkbox"]:empty~label {
+                                                position: relative;
+                                                line-height: 2.0em;
+                                                text-indent: 3.25em;
+                                                margin-top: 2px;
+                                                cursor: pointer;
+                                                -webkit-user-select: none;
+                                                -moz-user-select: none;
+                                                -ms-user-select: none;
+                                                user-select: none;
+                                            }
+
+
+
+
+
+                                            .funkyradio input[type="radio"]:empty~label:before,
+                                            .funkyradio input[type="checkbox"]:empty~label:before {
+                                                position: absolute;
+                                                display: block;
+                                                top: 0;
+                                                bottom: 0;
+                                                left: 0;
+                                                content: '';
+                                                width: 30px;
+                                                height: 30px;
+                                                background: #d1d1d1;
+                                                border-radius: 30px;
+                                            }
+
+                                            .funkyradio input[type="radio"]:hover:not(:checked)~label,
+                                            .funkyradio input[type="checkbox"]:hover:not(:checked)~label {
+                                                color: #c1a69a;
+                                            }
+
+                                            .funkyradio input[type="radio"]:hover:not(:checked)~label:before,
+                                            .funkyradio input[type="checkbox"]:hover:not(:checked)~label:before {
+                                                content: ' ';
+
+                                                display: block;
+                                                background: #c1a69a;
+                                            }
+
+                                            .funkyradio input[type="radio"]:checked~label,
+                                            .funkyradio input[type="checkbox"]:checked~label {
+                                                color: #777;
+                                            }
+
+                                            .funkyradio input[type="radio"]:checked~label:before,
+                                            .funkyradio input[type="checkbox"]:checked~label:before {
+                                                content: '1 ';
+                                                text-indent: .9em;
+                                                color: #fff;
+                                                background-color: #c1a69a;
+                                            }
+
+                                            .funkyradio input[type="radio"]:checked~label:after,
+                                            .funkyradio input[type="checkbox"]:checked~label:after {
+                                                content: ' ';
+                                                position: absolute;
+                                                display: block;
+                                                top: 3px;
+                                                bottom: 0;
+                                                left: 3px;
+                                                width: 24px;
+                                                height: 24px;
+
+                                                border-radius: 24px;
+
+                                                background-color: #fff;
+                                            }
+
+                                            .funkyradio input[type="radio"]:focus~label:before,
+                                            .funkyradio input[type="checkbox"]:focus~label:before {
+                                                box-shadow: 0 0 0 3px #999;
+                                            }
+                                        </style>
+
+
+                                        <div class="funkyradio">
+                                            <div class="funkyradio-primary">
+                                                <input type="radio" name="radio" id="radio1" />
+                                                <label for="radio1">Amazing Velve</label>
+                                            </div>
+                                            <div class="funkyradio-primary">
+                                                <input type="radio" name="radio" id="radio2" checked />
+                                                <label for="radio2">Fiu Fiu</label>
+                                            </div>
+                                            <div class="funkyradio-primary">
+                                                <input type="radio" name="radio" id="radio3" />
+                                                <label for="radio3">Velvet Magic</label>
+                                            </div>
+                                            <div class="funkyradio-primary">
+                                                <input type="radio" name="radio" id="radio4" />
+                                                <label for="radio4">Velvet mat</label>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                    <div class="col-9 ">
+                        <div class="row ">
+                            <div class=" p-2 border-bottom  border-white d-flex align-items-end flex-column sort">
+
+                                <select class="form-select form-select-sm" style="max-width: 200px">
+                                    <option disabled selected>Sort by:</option>
+                                    <option value="1">Cena </option>
+                                    <option value="2">Cena </option>
+                                    <option value="3">Rating</option>
+                                </select>
+
+                            </div>
+
+                           
+ <div class="product item col-md-4 col-sm-6  " >
+     <div class="product-js">
+         <div class="product-image4">
+             <a href="tovar.html">
+                 <img class="pic-1" src="/img/product/pr1-1.jpg">
+                 <img class="pic-2" src="/img/product/pr1-2.jpg">
+             </a>
+             <ul class="social">
+                 <li><a href="#" data-tip="Lista życzeń"><i class="bx bx-heart"></i></a></li>
+                 <li><a href="#" data-tip="Do koszyka"><i class="bx bx-cart"></i></a></li>
+             </ul>
+           
+         </div>
+         <div class="product-content">
+             <h3 class="title"><a href="tovar.html">Sofa «LEO»</a></h3>
+             <div class="price">
+                 Cena: 2799 zł
+                 <span>3299 zł</span>
+             </div>
+             <a class="add-to-cart" href="tovar.html">SZCZEGÓŁY</a>
+         </div>
+     </div>
+ </div> <div class="product item col-md-4 col-sm-6  " >
+     <div class="product-js">
+         <div class="product-image4">
+             <a href="tovar.html">
+                 <img class="pic-1" src="/img/product/pr0-1.jpg">
+                 <img class="pic-2" src="/img/product/pr0-2.jpg">
+             </a>
+             <ul class="social">
+                 <li><a href="#" data-tip="Lista życzeń"><i class="bx bx-heart"></i></a></li>
+                 <li><a href="#" data-tip="Do koszyka"><i class="bx bx-cart"></i></a></li>
+             </ul>
+             <span class="product-new-label">New</span>
+             <span class="product-discount-label">-50%</span>
+         </div>
+         <div class="product-content">
+             <h3 class="title"><a href="tovar.html">Sofa «LEO»</a></h3>
+             <div class="price">
+                 Cena: 2799 zł
+                 <span>3299 zł</span>
+             </div>
+             <a class="add-to-cart" href="tovar.html">SZCZEGÓŁY</a>
+         </div>
+     </div>
+ </div> <div class="product item col-md-4 col-sm-6  " >
+     <div class="product-js">
+         <div class="product-image4">
+             <a href="tovar.html">
+                 <img class="pic-1" src="/img/product/pr1-1.jpg">
+                 <img class="pic-2" src="/img/product/pr1-2.jpg">
+             </a>
+             <ul class="social">
+                 <li><a href="#" data-tip="Lista życzeń"><i class="bx bx-heart"></i></a></li>
+                 <li><a href="#" data-tip="Do koszyka"><i class="bx bx-cart"></i></a></li>
+             </ul>
+           
+         </div>
+         <div class="product-content">
+             <h3 class="title"><a href="tovar.html">Sofa «LEO»</a></h3>
+             <div class="price">
+                 Cena: 2799 zł
+                 <span>3299 zł</span>
+             </div>
+             <a class="add-to-cart" href="tovar.html">SZCZEGÓŁY</a>
+         </div>
+     </div>
+ </div> <div class="product item col-md-4 col-sm-6  " >
+     <div class="product-js">
+         <div class="product-image4">
+             <a href="tovar.html">
+                 <img class="pic-1" src="/img/product/pr1-1.jpg">
+                 <img class="pic-2" src="/img/product/pr1-2.jpg">
+             </a>
+             <ul class="social">
+                 <li><a href="#" data-tip="Lista życzeń"><i class="bx bx-heart"></i></a></li>
+                 <li><a href="#" data-tip="Do koszyka"><i class="bx bx-cart"></i></a></li>
+             </ul>
+           
+         </div>
+         <div class="product-content">
+             <h3 class="title"><a href="tovar.html">Sofa «LEO»</a></h3>
+             <div class="price">
+                 Cena: 2799 zł
+                 <span>3299 zł</span>
+             </div>
+             <a class="add-to-cart" href="tovar.html">SZCZEGÓŁY</a>
+         </div>
+     </div>
+ </div> <div class="product item col-md-4 col-sm-6  " >
+     <div class="product-js">
+         <div class="product-image4">
+             <a href="tovar.html">
+                 <img class="pic-1" src="/img/product/pr1-1.jpg">
+                 <img class="pic-2" src="/img/product/pr1-2.jpg">
+             </a>
+             <ul class="social">
+                 <li><a href="#" data-tip="Lista życzeń"><i class="bx bx-heart"></i></a></li>
+                 <li><a href="#" data-tip="Do koszyka"><i class="bx bx-cart"></i></a></li>
+             </ul>
+           
+         </div>
+         <div class="product-content">
+             <h3 class="title"><a href="tovar.html">Sofa «LEO»</a></h3>
+             <div class="price">
+                 Cena: 2799 zł
+                 <span>3299 zł</span>
+             </div>
+             <a class="add-to-cart" href="tovar.html">SZCZEGÓŁY</a>
+         </div>
+     </div>
+ </div> <div class="product item col-md-4 col-sm-6  " >
+     <div class="product-js">
+         <div class="product-image4">
+             <a href="tovar.html">
+                 <img class="pic-1" src="/img/product/pr0-1.jpg">
+                 <img class="pic-2" src="/img/product/pr0-2.jpg">
+             </a>
+             <ul class="social">
+                 <li><a href="#" data-tip="Lista życzeń"><i class="bx bx-heart"></i></a></li>
+                 <li><a href="#" data-tip="Do koszyka"><i class="bx bx-cart"></i></a></li>
+             </ul>
+             <span class="product-new-label">New</span>
+             <span class="product-discount-label">-50%</span>
+         </div>
+         <div class="product-content">
+             <h3 class="title"><a href="tovar.html">Sofa «LEO»</a></h3>
+             <div class="price">
+                 Cena: 2799 zł
+                 <span>3299 zł</span>
+             </div>
+             <a class="add-to-cart" href="tovar.html">SZCZEGÓŁY</a>
+         </div>
+     </div>
+ </div> <div class="product item col-md-4 col-sm-6  " >
+     <div class="product-js">
+         <div class="product-image4">
+             <a href="tovar.html">
+                 <img class="pic-1" src="/img/product/pr1-1.jpg">
+                 <img class="pic-2" src="/img/product/pr1-2.jpg">
+             </a>
+             <ul class="social">
+                 <li><a href="#" data-tip="Lista życzeń"><i class="bx bx-heart"></i></a></li>
+                 <li><a href="#" data-tip="Do koszyka"><i class="bx bx-cart"></i></a></li>
+             </ul>
+           
+         </div>
+         <div class="product-content">
+             <h3 class="title"><a href="tovar.html">Sofa «LEO»</a></h3>
+             <div class="price">
+                 Cena: 2799 zł
+                 <span>3299 zł</span>
+             </div>
+             <a class="add-to-cart" href="tovar.html">SZCZEGÓŁY</a>
+         </div>
+     </div>
+ </div> <div class="product item col-md-4 col-sm-6  " >
+     <div class="product-js">
+         <div class="product-image4">
+             <a href="tovar.html">
+                 <img class="pic-1" src="/img/product/pr1-1.jpg">
+                 <img class="pic-2" src="/img/product/pr1-2.jpg">
+             </a>
+             <ul class="social">
+                 <li><a href="#" data-tip="Lista życzeń"><i class="bx bx-heart"></i></a></li>
+                 <li><a href="#" data-tip="Do koszyka"><i class="bx bx-cart"></i></a></li>
+             </ul>
+           
+         </div>
+         <div class="product-content">
+             <h3 class="title"><a href="tovar.html">Sofa «LEO»</a></h3>
+             <div class="price">
+                 Cena: 2799 zł
+                 <span>3299 zł</span>
+             </div>
+             <a class="add-to-cart" href="tovar.html">SZCZEGÓŁY</a>
+         </div>
+     </div>
+ </div> <div class="product item col-md-4 col-sm-6  " >
+     <div class="product-js">
+         <div class="product-image4">
+             <a href="tovar.html">
+                 <img class="pic-1" src="/img/product/pr0-1.jpg">
+                 <img class="pic-2" src="/img/product/pr0-2.jpg">
+             </a>
+             <ul class="social">
+                 <li><a href="#" data-tip="Lista życzeń"><i class="bx bx-heart"></i></a></li>
+                 <li><a href="#" data-tip="Do koszyka"><i class="bx bx-cart"></i></a></li>
+             </ul>
+             <span class="product-new-label">New</span>
+             <span class="product-discount-label">-50%</span>
+         </div>
+         <div class="product-content">
+             <h3 class="title"><a href="tovar.html">Sofa «LEO»</a></h3>
+             <div class="price">
+                 Cena: 2799 zł
+                 <span>3299 zł</span>
+             </div>
+             <a class="add-to-cart" href="tovar.html">SZCZEGÓŁY</a>
+         </div>
+     </div>
+ </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+    <style>
+        .hSlider {
+            display: flex;
+        }
+
+        .hSlider .vertical-center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .hSlider h2 {
+            font-weight: 100;
+            padding: 12px;
+            /*
+              -webkit-transition: 1.1s all ease;
+            -moz-transition: 1.1s all ease;
+            transition: 1.1s all ease;
+             background: linear-gradient(to left,   #fff 50%, #c1a69a 50%) right;
+             background-size: 200% ;
+*/
+        }
+
+        .hSlider h2:hover {
+            color: #c1a69a;
+            /*            background-position:left;*/
+
+        }
+
+        .blocks .metaCenter {
+            position: relative;
+            height: auto;
+
+        }
+
+        .blocks .meta {
+            position: absolute;
+            bottom: 10px;
+            left: -10px;
+            color: white;
+            background: rgba(51, 51, 51, 0.5);
+            padding: 2px 8px 2px;
+            margin-bottom: 0;
+            font-size: 1.8em;
+            font-weight: 300;
+            min-width: 50%;
+            -webkit-transition: 0.5s all ease;
+            -moz-transition: 0.5s all ease;
+            transition: 0.5s all ease;
+
+
+        }
+
+        .blocks .metaCenter:hover .meta {
+            min-width: 80%
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+    <section class="container my-5  ">
+        <div class="row">
+            <div class="col text-justify">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam non eaque itaque iste dolorum sed quae cum tenetur molestias, facilis nulla, omnis sapiente, eveniet excepturi, nostrum sequi amet voluptas nisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam non eaque itaque iste dolorum sed quae cum tenetur molestias, facilis nulla, omnis sapiente, eveniet excepturi, nostrum sequi amet voluptas nisi.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam non eaque itaque iste dolorum sed quae cum tenetur molestias, facilis nulla, omnis sapiente, eveniet excepturi, nostrum sequi amet voluptas nisi.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam non eaque itaque iste dolorum sed quae cum tenetur molestias, facilis nulla, omnis sapiente, eveniet excepturi, nostrum sequi amet voluptas nisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam non eaque itaque iste dolorum sed quae cum tenetur molestias, facilis nulla, omnis sapiente, eveniet excepturi, nostrum sequi amet voluptas nisi.</p>
+            </div>
+        </div>
+    </section>
+
+ <section id="newslatter" class=" " style="background:#50403a">
+     <div class="container mt-5 p-5     font-sm">
+		<div class="row  text-sm-left text-md-left">
+        
+               <div class="col-xs-6 text-white col align-middle">
+					<h5><i class='bx bxl-telegram' ></i> NEWSLETTER</h5>
+					<p>Zawsze aktualne informacje o nowościach i promocjach. <br> <u>Kupon rabatowy</u> na pierwsze zakupy</p>
+					 
+				</div>
+				<div class="col-xs-6  col">
+					 <div class="input-group input-group-lg mb-3 mt-4">
+                              <input type="text" class="form-control" placeholder="Wpisz adres e-mail" aria-label="Recipient's username" aria-describedby="button-addon2">
+                              <button class="btn btn-outline-light border-3" type="button" id="button-addon2">Zapisz się</button>
+                            </div>
+				</div>
+        
+        
+         </div>
+     </div>
+ </section>
+
+<!-- Footer -->
+	<section id="footer">
+		<div class="container   p-5     font-sm">
+			<div class="row  text-sm-left text-md-left">
+				<div class="col-xs-12  col  py-5">
+					<h5>Pomoc</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="#"><i class='bx bx-chevrons-right'></i>Regulaminy</a></li>
+						<li><a href="#"><i class='bx bx-chevrons-right'></i>Zwroty i reklamacje</a></li>
+						<li><a href="#"><i class='bx bx-chevrons-right'></i>Pytania i odpowiedzi</a></li>
+					 
+					</ul>
+				</div>
+				<div class="col-xs-12  col  py-5">
+					<h5>Moje konto</h5>
+					<ul class="list-unstyled quick-links">
+					  <li><a href="#"><i class='bx bx-chevrons-right'></i>Twoje zamówienia</a></li>
+					  <li><a href="#"><i class='bx bx-chevrons-right'></i>Ustawienia konta</a></li>
+					  <li><a href="#"><i class='bx bx-chevrons-right'></i>Przechowalnia</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12  col  py-5">
+					<h5>Dostawa i płatność</h5>
+					<ul class="list-unstyled quick-links">
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Formy płatności</a></li> 
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Ratyy</a></li> 
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Czas i koszty dostawy</a></li> 
+					</ul>
+				</div>
+				 <div class="col-xs-12  col  py-5">
+					<h5> Informacje</h5>
+					<ul class="list-unstyled quick-links">
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Formularz kontaktowy</a></li> 
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Polityka prywatności</a></li> 
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Jak kupować?</a></li> 
+					</ul>
+				</div>
+				<div class="col-xs-12   col  py-5">
+					<h5> O Nas</h5>
+					<ul class="list-unstyled quick-links">
+                        <li><b>Zapraszamy do kontaktu</b></li> 
+						 <li><a href="#"><i class='bx bx-mail-send' ></i> info@johnsonstyle.pl</a></li> 
+						 <li><a href="#"><i class='bx bx-phone' ></i> +4 777-777-777</a></li> 
+					</ul>
+                     
+                      
+				</div>
+			</div>
+			 
+			 
+			<div class="row">
+				 <hr>
+				<div class="col-lg-6 col-12 mt-2 mt-sm-2 text-center text-white">
+					<ul class="list-unstyled quick-links social">
+<!--                       <li style="float:left"><b>Obserwuj nas</b></li> -->
+						 <li>
+						   <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+						   <a href="#"><i class='bx bxl-instagram' ></i></a>
+						   <a href="#"><i class='bx bxl-youtube' ></i></a>
+						 
+						 </li> 
+						  
+					</ul>
+				</div>
+<!--
+				<div class="col-lg-4 col-12 mt-2 mt-sm-2 text-center text-white">
+					<p>  All right Reversed. </p>
+					<p class="h6">© All right Reversed.<a class="text-green ml-2" href="#" target="_blank">JohnsonStyle</a></p>
+				</div>
+-->
+				<div class="col-lg-6 col-12 mt-2 mt-sm-2 text-center text-white"> 
+					 <ul class="list-unstyled quick-links  dp">
+<!--                       <li><b>Dostawa i płatność</b></li> -->
+						 <li>
+						   <i class='bx bxl-visa' ></i>
+						   <i class='bx bxl-mastercard' ></i>
+						   <i class='bx bxl-paypal' ></i>
+						 </li> 
+					</ul>
+				</div>
+				<hr>
+			</div>
+			
+			<div class="row">
+				 
+			 
+				<div class="col-  col-12 mt-2 mt-sm-2 text-center text-white">
+			 
+					<p class="h6">© All right Reversed.<a class="text-green ml-2" href="#" target="_blank"> JohnsonStyle 2022</a></p>
+				</div>
+				 
+				 
+			</div>
+			
+		</div>
+	</section>
+	<!-- ./Footer -->
+
+
+<style>
+    #newslatter h5{
+        font-weight: 100;
+        font-size: 40px;
+    }
+
+#footer {
+    background: #c1a69a !important;
+}
+    
+    #footer hr{
+        color:#9aa7b5
+    }
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+    text-transform: uppercase
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+ #footer ul li b {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 100;
+    }
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:40px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+    #footer ul.dp li i {
+ 
+	font-size:35px;
+ 
+}
+#footer ul.social li:hover{
+	padding: 3px 0;
+	margin-left:0px!important;
+	font-weight:100!important;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li a:hover i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
+
+</style>
+
+<script>
+    //NAVBAR STICKY ON SCROLL
+    document.addEventListener("DOMContentLoaded", function() {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 250) {
+                document.getElementById('navbar-sticky').classList.add('fixed-top');
+
+                navbar_height = document.querySelector('.navbar').offsetHeight;
+                document.body.style.paddingTop = navbar_height + 'px';
+            } else {
+                document.getElementById('navbar-sticky').classList.remove('fixed-top');
+                // remove padding top from body
+                document.body.style.paddingTop = '0';
+            }
+        });
+    });
+ 
+ 
+    //DROPDOWN  effect on hover
+    document.addEventListener("DOMContentLoaded", function() {
+        if (window.innerWidth > 992) {
+            document.querySelectorAll('.navbar .nav-item').forEach(function(everyitem) {
+                everyitem.addEventListener('mouseover', function(e) {
+                    let el_link = this.querySelector('a[data-bs-toggle]');
+                    if (el_link != null) {
+                        let nextEl = el_link.nextElementSibling;
+                        el_link.classList.add('show');
+                        nextEl.classList.add('show');
+                    }
+                });
+                everyitem.addEventListener('mouseleave', function(e) {
+                    let el_link = this.querySelector('a[data-bs-toggle]');
+
+                    if (el_link != null) {
+                        let nextEl = el_link.nextElementSibling;
+                        el_link.classList.remove('show');
+                        nextEl.classList.remove('show');
+                    }
+                })
+            });
+
+        }
+    });
+
+    //CART SIDEBAR
+ 
+document.getElementById("myCartIco").onclick = function() {
+  document.getElementById("myCart").classList.toggle("cartTrigger"); 
+}
+function closeNav() {
+  document.getElementById("myCart").classList.toggle("cartTrigger"); 
+  
+}
+    
+    
+    
+    
+//slider
+
+$('.product-carousel').slick({
+		lazyLoad: 'ondemand',
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		nextArrow: ' <i class="arrow right"> ',
+		prevArrow: '<i class="arrow left">',
+		infinite: false,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					infinite: true,
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		]
+});
+    $('.product-carousel-2').slick({
+		lazyLoad: 'ondemand',
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		nextArrow: ' <i class="arrow right"> ',
+		prevArrow: '<i class="arrow left">',
+		infinite: false,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					infinite: true,
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		]
+});
+</script>
+
+
+
+
+
+</body>
+
+</html>
