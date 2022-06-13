@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <!-- @import "loader.html" -->
+    <!-- @ import "loader.html" -->
     <!-- @import "header.html" -->
     <section class="container  my-3 product-single ">
         <div class="row">
@@ -29,10 +29,20 @@
                     <li class="breadcrumb-item active" aria-current="page">Collection</li>
                 </ol>
             </nav>
+            <h1 class="text-dark title">Łóżko kontynentalne na wysokich nóżkach z pojemnikiem AMORE </h1>
 
+            <style>
+                .container {
+                    max-width: 1670px
+                }
 
-
-            <div class="col-8">
+                h1.title {
+                    font-size: 2em;
+                    font-weight: 100;
+                    color: #b1998f !important
+                }
+            </style>
+            <div class="col-7">
 
                 <div class="sp-img_area g-3 overflow-hidden h-md-250 position-relativ">
                     <div class="slider slider-nav" id="sImg">
@@ -95,13 +105,29 @@
 
 
 
-            <div class="col-4">
-                <h1 class="text-dark title">Łóżko kontynentalne na wysokich nóżkach z pojemnikiem «AMORE»</h1>
+            <div class="col-5">
+
 
 
                 <div class=" my-3 py-2 text-center border">
-                    <div class="oldprice ">7 000.00 zł </div>
-                    <div class="price"><span>4 499.00 zł</span> z VAT</div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="oldprice ">7 000.00 zł </div>
+                            <div class="price"><span>4 499.00 zł</span> z VAT</div>
+                        </div>
+                        <div class="col-6 border-left">
+
+                            Informacje o ratach:
+
+                            lub 186,50 PLN co miesiąc w kredycie 0% na 20 rat
+                        </div>
+                    </div>
+
+
+
+
+
+
                 </div>
 
                 <style>
@@ -436,6 +462,16 @@
                     </div>
                 </div>
 
+                <div class="product-description options  my-3" id="materac">
+                    <div class="option-name my-2">Materac głowny : <span class="result">materac premium 7-strefowy (20cm) </span></div>
+                    <button type="button" class="size btn btn-outline-secondary border-2 btn-sm mx-1" value="" data-bs-toggle="modal" href="#ModalMatrace"> SZCZEGÓŁY </button>
+                </div>
+
+                <div class="product-description options  my-3" id="materac">
+                    <div class="option-name my-2">Toper : <span class="result">materac premium 7-strefowy (20cm) </span></div>
+                    <button type="button" class="size btn btn-outline-secondary border-2 btn-sm mx-1" value="" data-bs-toggle="modal" href="#ModalToper"> SZCZEGÓŁY </button>
+                </div>
+
                 <div class=" my-3 py-2 text-center border">
                     <button type="button" class="btn btn-alta border-1 btn-lg " value="">
                         <i class="bx bx-cart"></i> Do koszyka</button>
@@ -478,7 +514,7 @@
 
                     </div>
                 </div>
-                
+
                 <div class="modal-footer">
                     <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
                 </div>
@@ -502,5 +538,68 @@
             </div>
         </div>
     </div>
+    <style>
+        .max50 {
+            max-width: 150px;
+        }
+    </style>
+
+    <div class="modal fade" id="ModalMatrace" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content  border rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Matrace</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="/img/matraces/bonnel.jpg" class="img-fluid max50" alt="">
+                    <img src="/img/matraces/pocket.jpg" class="img-fluid max50" alt="">
+
+                    <ul>
+                        <li>twardość:H1 miękki</li>
+                        <li>Wkład materaca posiada siedem stref o różnych twardościach, więc dokładniej dopasowuje się do osoby leżącej.</li>
+                        <li>Produkt może być używany przez alergików.</li>
+                        <li>Produkt nadaje się do użytkowania po obu stronach. Ich regularna zamiana sprzyja wydłużeniu jego żywotności.</li>
+                        <li>Materac posiada dziesięć lat gwarancji na wkład.</li>
+                        <li>Materac jest rolowany przez producenta. Po rozpakowaniu potrzeba ok. 72h aby powrócił do normalnego kształtu.</li>
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#ModalToper" data-bs-toggle="modal">Go to Toper</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="ModalToper" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content  border rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title">Toper</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+                    <img src="/img/matraces/visco.jpg" class="img-fluid max50" alt="">
+                    <img src="/img/matraces/t25.jpg" class="img-fluid max50" alt="">
+                    <img src="/img/matraces/latex.jpg" class="img-fluid max50" alt="">
+                    <ul>
+                        <li>twardość:H1 miękki</li>
+                        <li>Wkład materaca posiada siedem stref o różnych twardościach, więc dokładniej dopasowuje się do osoby leżącej.</li>
+                        <li>Produkt może być używany przez alergików.</li>
+                        <li>Produkt nadaje się do użytkowania po obu stronach. Ich regularna zamiana sprzyja wydłużeniu jego żywotności.</li>
+                        <li>Materac posiada dziesięć lat gwarancji na wkład.</li>
+                        <li>Materac jest rolowany przez producenta. Po rozpakowaniu potrzeba ok. 72h aby powrócił do normalnego kształtu.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#ModalMatrace" data-bs-toggle="modal">Go to Matrace</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
