@@ -9,43 +9,30 @@
     <script src="/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/css/styles.css">
     <link href='/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="/js/jquery.zoom.min.js"></script>
     <script src="/js/main.js"></script>
 </head>
 
 <body>
-    <!-- @ import "loader.html" -->
+    <!-- @import "loader.html" -->
     <!-- @import "header.html" -->
     <section class="container  my-3 product-single ">
         <div class="row">
 
             <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item  text-sm"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item text-sm"><a href="#">Home</a></li>
                     <li class="breadcrumb-item"><a href="#">Łóżka</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Collection</li>
                 </ol>
             </nav>
            
 
-            <style>
-                .container {
-                    max-width: 1670px
-                }
-
-                h1.title {
-                    font-size: 1.2em;
-                    font-weight: 100;
-                    color: #b1998f !important;
-                    text-align: left;
-                }
-                h1.title b { font-weight: 900;
-                    font-size: 2em;
-                }
-            </style>
+ 
             <div class="col-7">
 
                 <div class="sp-img_area g-3 overflow-hidden h-md-250 position-relativ">
@@ -116,7 +103,7 @@
                 <div class=" my-3 py-2  border"  >
                     <div class="row" >
                         <div class="col-6 text-center">
-                            <div class="oldprice ">7 000.00 zł </div>
+                            <div class="oldprice "><span>7 000.00</span> zł </div>
                             <div class="price"><span>4 499.00 zł</span> z VAT</div>
                         </div>
                         <div class="col-6" style="border-left:1px solid #b1998f; padding:20px;  font-size: 12px;   background: #f8f9fa;">
@@ -135,7 +122,21 @@
 
                 </div>
 
-                <style>
+                        <style>
+                .container {
+                    max-width: 1670px
+                }
+
+                h1.title {
+                    font-size: 1.2em;
+                    font-weight: 100;
+                    color: #41464b !important; /*#b1998f*/
+                    text-align: left;
+                }
+                h1.title b { font-weight: 900;
+                    font-size: 2em;
+                }
+            
                     .amber-text {
                         color: #ffc107 !important;
                     }
@@ -172,14 +173,14 @@
                     <i class="bx bx-star py-2  rate-popover amber-text" data-index="4" data-html="true" data-toggle="popover" data-placement="top" title="" data-original-title="Excellent"></i>
                 </span>
 
-                <div class="my-2">
+                <div class="my-2" id="size">
                     <div class="option-name my-2">Powierzchnia spania (cm) :
                         <span class="result">180x200</span>
                     </div>
-                    <button type=" button" class="btn btn-outline-secondary border-2 btn-sm" value="">140x200</button>
-                    <button type="button" class="btn btn-outline-secondary border-2 btn-sm" value="">160x200</button>
-                    <button type="button" class="btn btn-outline-secondary border-2 btn-sm active " value="">180x200</button>
-                    <button type="button" class="btn btn-outline-secondary border-2 btn-sm" value="">200x200</button>
+                    <button type=" button" class="btn btn-outline-secondary border-2 btn-sm" value="" data-price="1500">140x200</button>
+                    <button type="button" class="btn btn-outline-secondary border-2 btn-sm" value="" data-price="1600">160x200</button>
+                    <button type="button" class="btn btn-outline-secondary border-2 btn-sm active" value="" data-price="1700">180x200</button>
+                    <button type="button" class="btn btn-outline-secondary border-2 btn-sm" value="" data-price="1800">200x200</button>
                 </div>
                 <div class="my-3" id="tkaninaClass">
                     <div class="my-2 option-name">Tkanina: <span class="result">Velvet</span></div>
