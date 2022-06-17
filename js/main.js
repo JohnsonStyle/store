@@ -43,7 +43,33 @@
                             //numImg взяти з активної .slick-track   яка активна slick-current
                             //console.log(tkaninaCode, colorCode, numImg, nozki)
                             //багнутий скрипт ЗУМ
+          
+          let price =    $(".price span:first-child"), //parseInt(price.text())
+              priceOld = $(".oldprice span:first-child"),
+              bazaP =    $("#size button.active").data("price"),
+              tkaninaP = $("#colors input:checked").data("price"),
+              pinP =     $("#pin input:first-child").data("price"),
+              nozkiP =   $("#nozki input:first-child").data("price"),
+              materacP = 1,
+              topperP =  1;
+          
+         
+          
+          
+         
+          
+             function priceTotal() {
+                  price.text( bazaP + tkaninaP + pinP + nozkiP + materacP + topperP);
+                  priceOld.text (parseInt(price.text())*2);
+                //console.log( bazaP, tkaninaP , pinP,  nozkiP , materacP, topperP)
+             } priceTotal();
 
+          
+          
+          
+          console.log( bazaP, tkaninaP , pinP,  nozkiP , materacP, topperP)
+          
+          
 
                             $("#nozki .option input ").click(function() {
                                 nozki = $(this).val(); //берем кодножки (1:1 назва файла і код)кольору 
@@ -54,6 +80,10 @@
 
                                 //загрузка по кліку zoom reset
                                 render();
+                                
+                                //берем вартість - виводим ціну
+                                nozkiP =   $("#nozki input:checked").data("price");
+                                priceTotal();
                                 setTimeout(loadZoom, 10);
                             })
 
@@ -63,6 +93,11 @@
                                 $("#pin .result").text(pin); //вивід назви опці біля заголовк уопції 
                                 imgUrlPin(pin);
                                 render();
+                                
+                                //берем вартість - виводим ціну
+                                pinP =  $("#pin input:checked").data("price"),
+                                priceTotal();
+                                
                                 setTimeout(loadZoom, 10);
                             })
 
@@ -76,6 +111,12 @@
                                 //загрузка по кліку zoom reset
                                 renderS();
                                 render();
+                                
+                                //берем вартість - виводим ціну
+                                
+                                tkaninaP = $("#colors input:checked").data("price"),
+                                priceTotal();
+                                
                                 setTimeout(loadZoom, 10);
                             })
 
