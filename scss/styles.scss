@@ -669,18 +669,20 @@ $vertical-space: 10px;
     transform: rotate(90deg);
     right: -15px;
     position: absolute;
-    top: 35%;
+    top: 48%;
     z-index: 1;
     padding: 5px 20px 5px 20px;
+    border: 0px;
 }
 .slick-prev-l {
     width: auto !important;
     transform: rotate(90deg);
     left: -12px;
     position: absolute;
-    top: 35%;
+    top: 48%;
     z-index: 1;
     padding: 5px 20px 5px 20px;
+    border: 0px;
 }
 .product-single .slick-arrow {
     background: #eaeaea;

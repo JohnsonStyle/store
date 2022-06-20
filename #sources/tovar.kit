@@ -182,7 +182,7 @@
                                             <div class="priceAdd"> 0 zł </div>
 
                                             <input type="radio" name="matrace" data-price="0" class="btn-check" id="matrace-1"   autocomplete="off"  checked >
-                                            <label class="btn  btn-outline-alta w-100" for="matrace-1">Checked</label><br>
+                                            <label class="btn  btn-outline-alta w-100" for="matrace-1">Wybierz</label><br>
                                         </div>
                                     </div>
 
@@ -206,7 +206,7 @@
 
 
                                             <input type="radio" name="matrace" data-price="500" class="btn-check" id="matrace-2"   autocomplete="off">
-                                            <label class="btn  btn-outline-alta w-100" for="matrace-2">Checked</label><br>
+                                            <label class="btn  btn-outline-alta w-100" for="matrace-2">Wybierz</label><br>
 
 
 
@@ -247,7 +247,7 @@
                                         <div class="col-3 text-center">
                                             <div class="priceAdd"> 0 zł </div>
                                              <input type="radio" name="toper" data-price="0" class="btn-check" id="toper-1"   autocomplete="off" checked>
-                                            <label class="btn  btn-outline-alta w-100" for="toper-1">Checked</label><br>
+                                            <label class="btn  btn-outline-alta w-100" for="toper-1">Wybierz</label><br>
                                         </div>
                                     </div>
 
@@ -266,7 +266,7 @@
                                         <div class="col-3 text-center">
                                             <div class="priceAdd"> +500 zł </div>
                                              <input type="radio" name="toper" data-price="500" class="btn-check" id="toper-2"   autocomplete="off">
-                                            <label class="btn  btn-outline-alta w-100" for="toper-2">Checked</label><br>
+                                            <label class="btn  btn-outline-alta w-100" for="toper-2">Wybierz</label><br>
                                         </div>
                                     </div>
 
@@ -285,7 +285,7 @@
                                         <div class="col-3 text-center">
                                             <div class="priceAdd"> +750 zł </div>
                                              <input type="radio" name="toper" data-price="750" class="btn-check" id="toper-3"   autocomplete="off">
-                                            <label class="btn  btn-outline-alta w-100" for="toper-3">Checked</label><br>
+                                            <label class="btn  btn-outline-alta w-100" for="toper-3">Wybierz</label><br>
                                         </div>
                                     </div>
 
@@ -688,16 +688,17 @@
                         </label>
                     </div>
                 </div>
-
-                <div class="product-description options  my-3" id="materac">
-                    <div class="option-name my-2">Materac głowny : <span class="result">materac premium 7-strefowy (20cm) </span></div>
+<div class="row">
+                <div class="product-description options  my-3 col-6" id="materac">
+                    <div class="option-name my-2">Materac głowny : <br><span class="result">materac premium 7-strefowy (20cm) </span></div>
                     <button type="button" class="w-100 size btn btn-outline-alta border-2 btn-sm mx-1" data-bs-toggle="modal" href="#ModalMatrace"> SZCZEGÓŁY </button>
                 </div>
 
-                <div class="product-description options  my-3" id="materac">
-                    <div class="option-name my-2">Toper : <span class="result">materac premium 7-strefowy (20cm) </span></div>
+                <div class="product-description options  my-3 col-6" id="materac">
+                    <div class="option-name my-2">Toper : <br><span class="result">materac premium 7-strefowy (20cm) </span></div>
                     <button type="button" class="w-100 size btn btn-outline-alta border-2 btn-sm mx-1" value="" data-bs-toggle="modal" href="#ModalToper"> SZCZEGÓŁY </button>
                 </div>
+  </div>
 
                 <div class=" my-3 py-2 text-center border">
                     <button type="button" class="btn btn-alta border-1 btn-lg " value="">
@@ -724,22 +725,29 @@
 
 
     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog  modal-xl w-100 modal-dialog-centered">
             <div class="modal-content border rounded-0">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalToggleLabel">Tkanina (description)</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <img src="/img/product2/velvet/000.jpg" alt="">
-                    <img src="/img/product2/velvet/001.jpg" alt="">
-                    <img src="/img/product2/velvet/002.jpg" alt="">
-                    <div class="m-3">
-                        <p><b>Tkanina:</b> Velvet Amazing</p>
-                        <p><b>Typ:</b> Premium, aksamit</p>
-                        <p><b>Waciwoci:</b> 450 g/m2; 90k cykli martindale`a. Mozliwe intensywne codzienne uzytkowanie</p>
-
+                <div class="modal-body row  modal-dialog-centered">
+                    <div class="col-9  wrap-modal-slider"> 
+  <div class="option-description-img">
+                        <img src="/img/product2/velvet/2202%20(1).jpg" class="img-fluid" alt="">
+                        <img src="/img/product2/velvet/2202%20(2).jpg" class="img-fluid" alt="">
+                        <img src="/img/product2/velvet/2202%20(3).jpg" class="img-fluid" alt="">
+                        </div>
                     </div>
+                    <div class="col-3">
+                        <div class="m-3">
+                            <p><b>Tkanina:</b> Velvet Amazing</p>
+                            <p><b>Typ:</b> Premium, aksamit</p>
+                            <p><b>Waciwoci:</b> 450 g/m2; 90k cykli martindale`a. Mozliwe intensywne codzienne uzytkowanie</p>
+                        </div>
+                    </div>
+ 
+
                 </div>
 
                 <div class="modal-footer">
@@ -752,14 +760,5 @@
  
 
 
-
-
-
-
-
-
-
-
 </body>
-
 </html>

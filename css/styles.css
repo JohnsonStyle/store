@@ -805,9 +805,10 @@ footer {
           transform: rotate(90deg);
   right: -15px;
   position: absolute;
-  top: 35%;
+  top: 48%;
   z-index: 1;
   padding: 5px 20px 5px 20px;
+  border: 0px;
 }
 
 .slick-prev-l {
@@ -816,9 +817,10 @@ footer {
           transform: rotate(90deg);
   left: -12px;
   position: absolute;
-  top: 35%;
+  top: 48%;
   z-index: 1;
   padding: 5px 20px 5px 20px;
+  border: 0px;
 }
 
 .product-single .slick-arrow {
