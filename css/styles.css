@@ -882,6 +882,14 @@ h1.title {
   margin-right: 10px;
 }
 
+.priceAdd {
+  font-weight: 700;
+  font-size: 35px;
+  color: #b1998f;
+  /*$brandColor;*/
+  margin-right: 10px;
+}
+
 .option-name {
   font-size: 13px;
 }
@@ -1056,7 +1064,7 @@ span.result {
           filter: brightness(0.9) brightness(0.9) contrast(1.3) contrast(1.3) saturate(150%);
 }
 
-.btn-alta {
+.btn-alta, .btn-check:checked + .btn-outline-alta {
   color: #fff;
   background-color: #b1998f;
   border-color: #b1998f;

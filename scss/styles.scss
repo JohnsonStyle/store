@@ -461,14 +461,15 @@ header {
     & .title a:hover {
         color: $brandColor
     }
-    & .price {
+    & .price  {
         color: $brandColor;
         font-size: 17px;
-        font-weight: 100;
+        font-weight: 100; 
         margin: 0 2px 15px 0;
         display: block
     }
-    & .price span {
+    
+    & .price span     {
         color: #909090;
         font-size: 13px;
         font-weight: 100;
@@ -730,6 +731,14 @@ h1.title {
     /*$brandColor;*/
     margin-right: 10px;
 }
+
+.priceAdd   {
+    font-weight: 700;
+    font-size: 35px;
+    color: #b1998f;
+    /*$brandColor;*/
+    margin-right: 10px;
+}
 .option-name {
     font-size: 13px;
 }
@@ -870,7 +879,7 @@ span.result {
     opacity: .95;
     filter: brightness(.9) brightness(.9) contrast(1.3) contrast(1.3) saturate(150%);
 }
-.btn-alta {
+.btn-alta, .btn-check:checked+.btn-outline-alta {
     color: #fff;
     background-color: #b1998f;
     border-color: #b1998f;

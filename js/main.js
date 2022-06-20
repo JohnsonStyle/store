@@ -50,8 +50,8 @@
               tkaninaP = $("#colors input:checked").data("price"),
               pinP =     $("#pin input:first-child").data("price"),
               nozkiP =   $("#nozki input:first-child").data("price"),
-              materacP = 1,
-              topperP =  1;
+              materacP = $("#ModalMatrace input:checked").data("price"),
+              topperP =  $("#ModalToper input:checked").data("price");
           
          
           
@@ -61,10 +61,19 @@
              function priceTotal() {
                   price.text( bazaP + tkaninaP + pinP + nozkiP + materacP + topperP);
                   priceOld.text (parseInt(price.text())*2);
-                //console.log( bazaP, tkaninaP , pinP,  nozkiP , materacP, topperP)
+                console.log( bazaP, tkaninaP , pinP,  nozkiP , materacP, topperP)
              } priceTotal();
 
           
+          $("#ModalMatrace  input ").click(function() {
+                                materacP =   $("#ModalMatrace input:checked").data("price"),
+                                priceTotal();
+                            })
+          
+          $("#ModalToper  input ").click(function() {
+                                topperP =   $("#ModalToper input:checked").data("price"),
+                                priceTotal();
+                            })
           
           
           console.log( bazaP, tkaninaP , pinP,  nozkiP , materacP, topperP)
