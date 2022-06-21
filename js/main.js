@@ -15,7 +15,14 @@
               arrows: false,
               fade: true,
               asNavFor: '.slider-nav',
+              adaptiveHeight:false,
               draggable: false,
+               responsive: [{
+                  breakpoint:800,
+                  settings: {
+                         adaptiveHeight:true,
+                           }
+                 }, ],
           });
           $('.slider-nav').slick({
               prevArrow: '<button type="button" class="slick-prev"><i class="bx bx-chevron-up"></i></button>',
@@ -27,17 +34,18 @@
               infinite: false,
               focusOnSelect: true,
               arrows: true,
-              adaptiveHeight: true,
+            
               vertical: true,
               verticalSwiping: true,
               responsive: [{
-                  breakpoint: 992,
+                  breakpoint:800,
                   settings: {
-                      slidesToShow: 3,
-                      vertical: true,
-                      verticalSwiping: true,
-                  }
-                                }, ],
+                        slidesToShow: 5,
+                        variableWidth: false,
+                        vertical: false,
+                         arrows: false,
+                           }
+                 }, ],
           });
 
 
