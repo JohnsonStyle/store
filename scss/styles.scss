@@ -23,7 +23,7 @@ body {}
     content: " ";
     width: 160px;
     height: 60px;
-    background: url(svg/logo.svg) no-repeat;
+    background: url(../svg/logo.svg) no-repeat;
     position: absolute;
     margin: -86px 0px 5px -51px;
 }
@@ -420,7 +420,7 @@ header {
         left: 10px;
         top: 15px;
         transition: all .3s;
-        background: url(svg/i-new.svg);
+        background: url(../svg/i-new.svg);
     }
     & .product-discount-label {
         color: #d90000;
@@ -440,7 +440,7 @@ header {
         left: auto;
         right: 10px;
         background-color: #d7292a;
-        background: url(svg/i-discount.svg);
+        background: url(../svg/i-discount.svg);
     }
     &:hover .product-new-label {
         opacity: 1
@@ -844,7 +844,7 @@ span.result {
     position: absolute;
     top: 1;
     left: -17px;
-    background-image: url(img/c_before.png);
+    background-image: url(../img/c_before.png);
 }
 .product-description {
     display: block;
