@@ -56,9 +56,9 @@
               numImgIndex = 0,
               nozki = $("#nozki .option input ").first().val(),
               pin = $("#pin .option input ").first().val(),
-              urlPin = '/img/options/pin/' + numImg + '_' + pin + '.png',
-              urlNoz = '/img/options/nozki/' + numImg + '+' + nozki + '.png',
-              url = ('/img/product2/' + tkaninaCode.toLowerCase() + '/' + colorCode + '/' + numImg + '+baza.jpg').replace(/\s+/g, '');
+              urlPin = 'img/options/pin/' + numImg + '_' + pin + '.png',
+              urlNoz = 'img/options/nozki/' + numImg + '+' + nozki + '.png',
+              url = ('img/product2/' + tkaninaCode.toLowerCase() + '/' + colorCode + '/' + numImg + '+baza.jpg').replace(/\s+/g, '');
           //numImg взяти з активної .slick-track   яка активна slick-current
           //console.log(tkaninaCode, colorCode, numImg, nozki)
           //багнутий скрипт ЗУМ
@@ -171,18 +171,18 @@
           }
 
           function imgUrl() {
-              return url = ('/img/product2/' + tkaninaCode.toLowerCase() + '/' + colorCode + '/' + numImg + '+baza.jpg').replace(/\s+/g, '');
+              return url = ('img/product2/' + tkaninaCode.toLowerCase() + '/' + colorCode + '/' + numImg + '+baza.jpg').replace(/\s+/g, '');
               //$('img.tovar').attr('src', url);
               console.log(url)
           }
 
           function imgUrlPin() {
-              return urlPin = ('/img/options/pin/' + numImg + '_' + pin + '.png').replace(/\s+/g, '');
+              return urlPin = ('img/options/pin/' + numImg + '_' + pin + '.png').replace(/\s+/g, '');
               //    console.log(urlPin)
           }
 
           function imgUrlNoz() {
-              return urlNoz = ('/img/options/nozki/' + numImg + '+' + nozki + '.png').replace(/\s+/g, '');
+              return urlNoz = ('img/options/nozki/' + numImg + '+' + nozki + '.png').replace(/\s+/g, '');
               //   console.log(urlNoz)
           }
 
@@ -267,10 +267,10 @@
 
                   const [nozka, face, border, back] = await Promise.all(
                                         [
-                                            ('/img/options/nozki/' + (i + 1) + '+' + nozki + '.png').replace(/\s+/g, ''),
-                                            ('/img/options/pin/' + (i + 1) + '_' + pin + '.png').replace(/\s+/g, ''),
-                                            ('/img/product2/' + tkaninaCode.toLowerCase() + '/' + colorCode + '/' + (i + 1) + '+baza.jpg').replace(/\s+/g, ''),
-                                            ('/img/product2/' + tkaninaCode.toLowerCase() + '/' + colorCode + '/' + (i + 1) + '+baza.jpg').replace(/\s+/g, '')
+                                            ('img/options/nozki/' + (i + 1) + '+' + nozki + '.png').replace(/\s+/g, ''),
+                                            ('img/options/pin/' + (i + 1) + '_' + pin + '.png').replace(/\s+/g, ''),
+                                            ('img/product2/' + tkaninaCode.toLowerCase() + '/' + colorCode + '/' + (i + 1) + '+baza.jpg').replace(/\s+/g, ''),
+                                            ('img/product2/' + tkaninaCode.toLowerCase() + '/' + colorCode + '/' + (i + 1) + '+baza.jpg').replace(/\s+/g, '')
                                         ].map(url => {
                           const img = new Image();
                           img.src = url;
