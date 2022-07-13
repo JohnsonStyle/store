@@ -359,13 +359,7 @@
           });
           
 
-//focus input Search form
-          $(".searchModalfocus").click(function() {
-           function focus() {
-               $(".searchModal").attr("autofocus","autofocus").focus();
-                }
-          setTimeout(focus , 1000); 
-        });
+
           
           
           

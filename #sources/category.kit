@@ -12,20 +12,23 @@
     <link href="css/boxicons.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js"></script>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.css">
+    <script src="js/app.js"></script>
 </head>
 <body>
     <!-- @ import "loader.html" -->
     <!-- @import "header.html" -->
-    <section class="container my-5 product-category">
+    <section class="container my-2 product-category">
         <div class="row">
-            <nav class="col-4 pt-3" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+            <nav class="col-lg-4  col-sm-12 pt-3" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item  text-sm"><a href="/">Home</a></li>
                     <li class="breadcrumb-item"><a href="category.html">Łóżka</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Collection Della</li>
                 </ol>
             </nav>
-            <h1 class="col-8  d-flex align-items-end flex-column" style="font-weight: 100">Category Łóżka </h1>
+            <h1 class="col-lg-8 col-sm-12  d-flex align-items-end flex-column" style="font-weight: 100">Category Łóżka </h1>
             <hr>
             <div class="container ">
                 <div class="row">
@@ -53,75 +56,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js"></script>
-                                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.css">
-                                    <script>
-                                        /**
-                                         * Range slider
-                                         * @requires https://github.com/leongersen/noUiSlider
-                                         */
-                                        var rangeSlider = function() {
-                                            var rangeSliderWidget = document.querySelectorAll('.range-slider');
-                                            var _loop2 = function _loop2(i) {
-                                                var rangeSlider = rangeSliderWidget[i].querySelector('.range-slider-ui'),
-                                                    valueMinInput = rangeSliderWidget[i].querySelector('.range-slider-value-min'),
-                                                    valueMaxInput = rangeSliderWidget[i].querySelector('.range-slider-value-max');
-                                                var options = {
-                                                    dataStartMin: parseInt(rangeSliderWidget[i].dataset.startMin, 10),
-                                                    dataStartMax: parseInt(rangeSliderWidget[i].dataset.startMax, 10),
-                                                    dataMin: parseInt(rangeSliderWidget[i].dataset.min, 10),
-                                                    dataMax: parseInt(rangeSliderWidget[i].dataset.max, 10),
-                                                    dataStep: parseInt(rangeSliderWidget[i].dataset.step, 10)
-                                                };
-                                                var start = options.dataStartMax ? [options.dataStartMin, options.dataStartMax] : [options.dataStartMin],
-                                                    connect = options.dataStartMax ? true : 'lower';
-                                                noUiSlider.create(rangeSlider, {
-                                                    start: start,
-                                                    connect: connect,
-                                                    step: options.dataStep,
-                                                    tooltips: true,
-                                                    range: {
-                                                        'min': options.dataMin,
-                                                        'max': options.dataMax
-                                                    },
-                                                    format: {
-                                                        to: function to(value) {
-                                                            return parseInt(value, 10) + ' zł';
-                                                        },
-                                                        from: function from(value) {
-                                                            return Number(value);
-                                                        }
-                                                    }
-                                                });
-                                                rangeSlider.noUiSlider.on('update', function(values, handle) {
-                                                    var value = values[handle];
-                                                    value = value.replace(/\D/g, '');
-                                                    if (handle) {
-                                                        if (valueMaxInput) {
-                                                            valueMaxInput.value = Math.round(value);
-                                                        }
-                                                    } else {
-                                                        if (valueMinInput) {
-                                                            valueMinInput.value = Math.round(value);
-                                                        }
-                                                    }
-                                                });
-                                                if (valueMinInput) {
-                                                    valueMinInput.addEventListener('change', function() {
-                                                        rangeSlider.noUiSlider.set([this.value, null]);
-                                                    });
-                                                }
-                                                if (valueMaxInput) {
-                                                    valueMaxInput.addEventListener('change', function() {
-                                                        rangeSlider.noUiSlider.set([null, this.value]);
-                                                    });
-                                                }
-                                            };
-                                            for (var i = 0; i < rangeSliderWidget.length; i++) {
-                                                _loop2(i);
-                                            }
-                                        }();
-                                    </script>
+                                 
+                                
                                     <style>
                                         .range-slider-ui {
                                             height: 0.25rem;
