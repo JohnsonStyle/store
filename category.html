@@ -83,10 +83,7 @@
         </div>
     </div>
 </div>
-    <script>
-        $('.searchModal')
-             $('.searchModal').focus();
-    </script>
+
 
 <style>
     .searchModal {
@@ -100,11 +97,8 @@
 
     }
     #searchModal i {font-size: 2rem;position: relative;    top: 10px;float: right;}
-    .searchModal:focus {   outline: none; background-color: rgba(177, 153, 143, 0.1); }
+    .searchModal:focus {   outline: none; background-color: rgba(177, 153, 143, 0.0); }
 </style>
-
-
-
 <!--
             <div class="d-flex justify-content-center h-100  ">
                 <div class="searchbar">
@@ -113,22 +107,12 @@
                 </div>
             </div>
 -->
-
-
-
-
-            
 <!--
              <a href="#" class="btn btn-outline-dark p-2 d-none  d-sm-block" target="_blank" rel="noopener">
                  <i class="bx bx-search   "></i>
              </a>
 -->
-
-           
-              
-           
-           
-            <button class="btn   p-2  ms-1  " data-bs-toggle="modal" href="#searchModal" role="button">
+            <button  class="btn p-2  ms-1 searchModalfocus"  data-bs-toggle="modal" href="#searchModal" role="button">
                 <i class="bx bx-search"></i>
             </button>
             <button class="btn   p-2  ms-1  " target="_blank" rel="noopener">
@@ -154,8 +138,10 @@
         </div>
     </div>
 </nav>
+ 
 
-
+  
+  
 <header id="navbar-sticky" class=" mb-auto navbar navbar-expand-lg navbar-light bg-light ">
     <div class="container px-0">
         <div id="navbarNav" class="offcanvas offcanvas-end">

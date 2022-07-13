@@ -358,7 +358,20 @@
               });
           });
           
-  
+
+//focus input Search form
+          $(".searchModalfocus").click(function() {
+           function focus() {
+               $(".searchModal").attr("autofocus","autofocus").focus();
+                }
+          setTimeout(focus , 1000); 
+        });
+          
+          
+          
+          
+          
+          
       if( Mobile ) {
  //модальне вікно топера/матрац delete-rename class
           console.log ('responsive ACTIVE')
