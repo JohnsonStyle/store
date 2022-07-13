@@ -1,4 +1,9 @@
       $(document).ready(function () {
+ 
+          const Mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+          
+          
+          
           $('.option-description-img').slick({
               prevArrow: '<button type="button" class="slick-prev-l"><i class="bx bx-chevron-down"></i></button>',
               nextArrow: '<button type="button" class="slick-next-r"><i class="bx bx-chevron-up"></i></button>',
@@ -155,6 +160,8 @@
           $('#sImg .slick-slide').click(function () {
               numImgIndex = $(this).attr('data-slick-index');
               numImg = parseInt($(this).attr('data-slick-index')) + 1;
+       
+             
               //перевірка чи є фігура для рендерінга
               if (this.localName === 'figure') {
                   imgUrl();
@@ -248,8 +255,8 @@
               document.getElementById('bImg' + numImgIndex).appendChild(renderImg).classList.add("img-fluid");
 
               // console.log('active numImgIndex='+ numImgIndex)
-
-              $('.zoom').zoom(); //загрузка мoдуля при старті сторінки
+              setTimeout(loadZoom, 1);
+             // $('.zoom').zoom(); //загрузка мoдуля при старті сторінки
           }; //end
           render();
 
@@ -350,4 +357,16 @@
                   //console.log( $(this).val(),  $(this).next('label').hide() );
               });
           });
+          
+  
+      if( Mobile ) {
+ //модальне вікно топера/матрац delete-rename class
+          console.log ('responsive ACTIVE')
+      $(".foreground").attr('class', 'row foreground-disable');
+}
+          
+          
+          
+          
+          
       });

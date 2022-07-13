@@ -26,25 +26,7 @@
    
    
    
- 
-<figure class="preloader" id="preloader">
-  <div class="circles-group">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-  </div>
-</figure>
-<div class="background"></div>
-<script>
-const preloader = document.querySelector('#preloader');
-preloader.classList.add('show-preloader');
-window.addEventListener('load', function () {
-	//setTimeout(function(){
-    	preloader.classList.remove('show-preloader');
-	//},0);
-}); 
-</script>
-<!--PRELOADER-->
+
     
  <nav class="d-none p-2 col-12 text-white  text-center" style="background: linear-gradient(rgb(227, 177, 157) 0%, rgb(217, 171, 119) 100%)"  >
     <div class="container-fluid "  style="border: 1px solid rgb(255, 255, 255); ">
@@ -334,6 +316,18 @@ window.addEventListener('load', function () {
                         flex: none;
                         /* required */
                     }
+                    
+                    @media only screen and (max-width:990px) {
+                        .mblock .foreground  {
+                            box-sizing:inherit;
+                        /* required */
+                        width: auto;
+                        /* required */
+                        flex:auto;
+                        /* required */
+                             margin-left: auto;
+                        }
+                    }
 
                     .mblock .foreground {
                         margin-left: -100%;
@@ -385,8 +379,8 @@ window.addEventListener('load', function () {
                                 </div>
                                 <div class="modal-body">
                                     <div class="row modal-dialog-centered border-bottom p-3">
-                                        <div class="col-3"><img src="img/matraces/bonnel_2.jpg" class="img-fluid rounded-2" alt=""></div>
-                                        <div class="col-6">
+                                        <div class="col-lg-3   col-sm-6"><img src="img/matraces/bonnel_2.jpg" class="img-fluid rounded-2" alt=""></div>
+                                        <div class="col-lg-6   col-sm-6">
 
                                             <ul style="font-size:12px; margin:0px 20px;  ">
                                                 <li>twardość:H1 miękki</li>
@@ -398,7 +392,7 @@ window.addEventListener('load', function () {
                                             </ul>
 
                                         </div>
-                                        <div class="col-3 text-center">
+                                        <div class=" col-lg-3  col-sm-12 text-center">
                                             <div class="priceAdd"> 0 zł </div>
 
                                             <input type="radio" name="matrace" data-price="0" class="btn-check" id="matrace-1"   autocomplete="off"  checked >
@@ -407,8 +401,8 @@ window.addEventListener('load', function () {
                                     </div>
 
                                     <div class="row modal-dialog-centered border-bottom p-3">
-                                        <div class="col-3"><img src="img/matraces/pocket_2.jpg" class="img-fluid rounded-2" alt=""></div>
-                                        <div class="col-6">
+                                        <div class="col-lg-3 col-sm-6"><img src="img/matraces/pocket_2.jpg" class="img-fluid rounded-2" alt=""></div>
+                                        <div class="col-lg-6 col-sm-6">
 
                                             <ul style="font-size:12px; margin:0px 20px;  ">
                                                 <li>twardość:H2 miękki</li>
@@ -420,7 +414,7 @@ window.addEventListener('load', function () {
                                             </ul>
 
                                         </div>
-                                        <div class="col-3 text-center">
+                                        <div class="col-lg-3 col-sm-12 text-center">
                                             <div class="priceAdd"> +500 zł </div>
 
 
@@ -1300,14 +1294,14 @@ $('.product-carousel').slick({
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body row  modal-dialog-centered">
-                    <div class="col-9  wrap-modal-slider"> 
+                    <div class="col-lg-9 col-sm-12  wrap-modal-slider"> 
   <div class="option-description-img">
                         <img src="img/product2/velvet/2202%20(1).jpg" class="img-fluid" alt="">
                         <img src="img/product2/velvet/2202%20(2).jpg" class="img-fluid" alt="">
                         <img src="img/product2/velvet/2202%20(3).jpg" class="img-fluid" alt="">
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-lg-3 col-sm-12">
                         <div class="m-3">
                             <p><b>Tkanina:</b> Velvet Amazing</p>
                             <p><b>Typ:</b> Premium, aksamit</p>
