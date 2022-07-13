@@ -104,6 +104,7 @@ p {
 .fixed-top {
   -webkit-animation: navbar-show 0.75s ease-in-out;
   animation: navbar-show 0.75s ease-in-out;
+  z-index: 7;
 }
 
 @-webkit-keyframes navbar-show {
@@ -312,7 +313,7 @@ header {
 
 .cartTrigger {
   width: 300px;
-  z-index: 9999;
+  z-index: 11;
 }
 
 @media screen and (max-height: 450px) {
@@ -321,6 +322,56 @@ header {
   }
 
   .sidenav a {
+    font-size: 18px;
+  }
+}
+.sidefilter {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 8888;
+  top: 0;
+  left: 0;
+  background-color: red;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidefilter a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sidefilter a:hover {
+  color: #f1f1f1;
+}
+
+.sidefilter .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.cartTrigger {
+  width: 300px;
+  z-index: 10;
+}
+
+@media screen and (max-height: 450px) {
+  .sidefilter {
+    padding-top: 15px;
+  }
+
+  .sidefilter a {
     font-size: 18px;
   }
 }
@@ -383,7 +434,7 @@ header {
   text-align: center;
   border-radius: 1px;
   overflow: hidden;
-  z-index: 1;
+  z-index: 5;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
@@ -1095,10 +1146,10 @@ span.result {
 }
 
 .product-category .filter {
-  z-index: 99;
+  z-index: 0;
 }
 .product-category .sort {
-  z-index: 99;
+  z-index: 0;
 }
 .product-category .product {
   margin: -1px 0px 0px -1px;
@@ -1109,7 +1160,7 @@ span.result {
 .product-category .product-js:hover {
   margin: -15px;
   background: #fff;
-  z-index: 999;
+  z-index: 6;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
