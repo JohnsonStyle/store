@@ -35,26 +35,24 @@ window.addEventListener('load', function () {
 	//},0);
 }); 
 </script>
-<!--PRELOADER-->
-    
- <nav class="d-none p-2 col-12 text-white  text-center" style="background: linear-gradient(rgb(227, 177, 157) 0%, rgb(217, 171, 119) 100%)"  >
-    <div class="container-fluid "  style="border: 1px solid rgb(255, 255, 255); ">
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center   my-2">
-        <li class="nav-item"><a href="#" class="nav   text-white   " style="text-decoration:none">  
-        Zarejestruj sie i otrzymaj voucher 50 zł!</a></li>
-      </ul>
-      <!--ul class="nav">
+<!--PRELOADER--><nav class="d-none p-2 col-12 text-white  text-center" style="background: linear-gradient(rgb(227, 177, 157) 0%, rgb(217, 171, 119) 100%)">
+    <div class="container-fluid " style="border: 1px solid rgb(255, 255, 255); ">
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center   my-2">
+            <li class="nav-item"><a href="#" class="nav   text-white   " style="text-decoration:none">
+                    Zarejestruj sie i otrzymaj voucher 50 zł!</a></li>
+        </ul>
+        <!--ul class="nav">
         <li class="nav-item"><a href="#" class="nav-link text-white px-2">tel: +48 777-777-777</a></li>
       </ul-->
     </div>
-  </nav>
-     
-      
-        <nav class="py-2 bg-light border-bottom">
-     <div class="container d-flex flex-wrap">
+</nav>
 
 
-<!--
+<nav class="py-2 bg-light border-bottom">
+    <div class="container d-flex flex-wrap">
+
+
+        <!--
          <div class="nav col-4">
                  <style>
                      .map {position: relative;
@@ -77,144 +75,200 @@ window.addEventListener('load', function () {
 
 
 
-<!--offset-4-->
-         <a href="/" class=" offset-lg-4 col-lg-4 col-12 d-flex justify-content-center  ">
-             <img src="svg/logo.svg" width="200">
-         </a>
-
-         <div class="col-lg-4 col-12 nav d-flex justify-content-lg-end justify-content-center ">
-
-             <div class="d-flex justify-content-center h-100  ">
-                 <div class="searchbar">
-                     <input class="search_input" type="text" name="" placeholder="Szukaj...">
-                     <a href="#" class="search_icon"><i class="bx bx-search"></i></a>
-                 </div>
-             </div>
+        <!--offset-4-->
+        <a href="/" class=" offset-lg-4 col-lg-4 col-12 d-flex justify-content-center  ">
+            <img src="svg/logo.svg" width="200">
+        </a>
 
 
+        <div class="col-lg-4 col-12 nav d-flex justify-content-lg-end justify-content-center ">
 
-             <!--
+
+          
+
+<div class="modal fade" id="searchModal" aria-hidden="true" aria-labelledby="searchModall" tabindex="-1">
+    <div class="modal-dialog  " style="margin: 0; max-width: 100%; padding:1px">
+        <div class="modal-content border rounded-0">
+
+
+<div class="modal-body row p-4   m-3">
+    <div class="col-1 offset-1">
+    <i class="bx bx-search"></i>
+    </div>
+    <div class="col-8">
+        <input class="searchModal"   type="text" name="" placeholder="Szukaj na stronie..." >
+    </div>
+    <div class="col-2 "> <button type="button" class="btn-close m-2" data-bs-dismiss="modal" aria-label="Close"></button></div>
+
+</div>
+        </div>
+    </div>
+</div>
+    <script>
+        $('.searchModal')
+             $('.searchModal').focus();
+    </script>
+
+<style>
+    .searchModal {
+        font-weight: 100;
+        font-size: 24px;
+        border: 0;
+        flex: 1 1 auto;
+         width: 100%;
+        padding: 8px 10px;
+        border-radius: 0;
+
+    }
+    #searchModal i {font-size: 2rem;position: relative;    top: 10px;float: right;}
+    .searchModal:focus {   outline: none; background-color: rgba(177, 153, 143, 0.1); }
+</style>
+
+
+
+<!--
+            <div class="d-flex justify-content-center h-100  ">
+                <div class="searchbar">
+                    <input class="search_input" type="text" name="" placeholder="Szukaj...">
+                    <a href="#" class="search_icon"><i class="bx bx-search"></i></a>
+                </div>
+            </div>
+-->
+
+
+
+
+            
+<!--
              <a href="#" class="btn btn-outline-dark p-2 d-none  d-sm-block" target="_blank" rel="noopener">
                  <i class="bx bx-search   "></i>
              </a>
 -->
-             <button class="btn   p-2  ms-1  " target="_blank" rel="noopener">
-                 <i class="bx bx-heart    "></i>
-             </button>
-             <button class="btn    p-2 mx-1  " target="_blank" rel="noopener">
-                 <i class="bx bx-user   "></i>
-             </button>
-             <button id="myCartIco" class="btn  p-2  " target="_blank" rel="noopener">
-                 <i class="bx bx-cart   "></i>
-             </button>
 
-             <div id="myCart" class="sidenav">
-                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                 <a href="#"> <i class="bx bx-cart   "></i> - Tovar #1 - 5999 zl</a>
-                 <a href="#"> <i class="bx bx-cart   "></i> - Tovar #2 - 4999 zl</a>
-                 <a href="#"> <i class="bx bx-cart   "></i> - Tovar #3 - 3999 zl</a>
-                 <a href="#"> <i class="bx bx-cart   "></i> - Tovar #4 - 7050 zl</a>
-             </div>
+           
+              
+           
+           
+            <button class="btn   p-2  ms-1  " data-bs-toggle="modal" href="#searchModal" role="button">
+                <i class="bx bx-search"></i>
+            </button>
+            <button class="btn   p-2  ms-1  " target="_blank" rel="noopener">
+                <i class="bx bx-heart    "></i>
+            </button>
+            <button class="btn    p-2 mx-1  " target="_blank" rel="noopener">
+                <i class="bx bx-user   "></i>
+            </button>
+            <button id="myCartIco" class="btn  p-2  " target="_blank" rel="noopener">
+                <i class="bx bx-cart   "></i>
+            </button>
+
+            <div id="myCart" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="#"> <i class="bx bx-cart   "></i> - Tovar #1 - 5999 zl</a>
+                <a href="#"> <i class="bx bx-cart   "></i> - Tovar #2 - 4999 zl</a>
+                <a href="#"> <i class="bx bx-cart   "></i> - Tovar #3 - 3999 zl</a>
+                <a href="#"> <i class="bx bx-cart   "></i> - Tovar #4 - 7050 zl</a>
+            </div>
 
 
 
-         </div>
-     </div>
- </nav>
+        </div>
+    </div>
+</nav>
 
 
- <header id="navbar-sticky" class=" mb-auto navbar navbar-expand-lg navbar-light bg-light ">
-     <div class="container px-0">
-         <div id="navbarNav" class="offcanvas offcanvas-end">
-             <div class="offcanvas-header border-bottom">
-                 <h5 class="offcanvas-title">Menu</h5>
-                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-             </div>
-             <div class="offcanvas-body mx-auto flex-column">
-                 <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+<header id="navbar-sticky" class=" mb-auto navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container px-0">
+        <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body mx-auto flex-column">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
 
-                     <li class="nav-item">
-                         <a href="#" class="nav-link">Nowości</a>
-                     </li>
-                     <li class="nav-item">
-                         <a href="category.html" class="nav-link">Bestsellery</a>
-                     </li>
-                     <li class="nav-item dropdown">
-                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Łóżka</a>
-                         <div class="dropdown-menu rounded-0 border-0 px-3 py-4" style="min-width: 22rem;">
-                             <div class="d-lg-flex ">
-                                 <div class="mega-dropdown-column">
-                                     <h6 class="px-3 mb-2">Category #1</h6>
-                                     <ul class="list-unstyled mb-3">
-                                         <li><a href="#" class="dropdown-item py-1">Bestsellery sofa</a></li>
-                                         <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
-                                         <li><a href="#" class="dropdown-item py-1">Bestsellery sofa</a></li>
-                                         <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Nowości</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="category.html" class="nav-link">Bestsellery</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Łóżka</a>
+                        <div class="dropdown-menu rounded-0 border-0 px-3 py-4" style="min-width: 22rem;">
+                            <div class="d-lg-flex ">
+                                <div class="mega-dropdown-column">
+                                    <h6 class="px-3 mb-2">Category #1</h6>
+                                    <ul class="list-unstyled mb-3">
+                                        <li><a href="#" class="dropdown-item py-1">Bestsellery sofa</a></li>
+                                        <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
+                                        <li><a href="#" class="dropdown-item py-1">Bestsellery sofa</a></li>
+                                        <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
 
-                                     </ul>
+                                    </ul>
 
-                                 </div>
-                                 <div class="mega-dropdown-column">
-                                     <h6 class="px-3 mb-2">Category #2</h6>
-                                     <ul class="list-unstyled mb-3">
-                                         <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
-                                         <li><a href="#" class="dropdown-item py-1">Bestsellery sofa</a></li>
-                                         <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
-                                         <li><a href="#" class="dropdown-item py-1"> Bestsellery sofa</a></li>
+                                </div>
+                                <div class="mega-dropdown-column">
+                                    <h6 class="px-3 mb-2">Category #2</h6>
+                                    <ul class="list-unstyled mb-3">
+                                        <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
+                                        <li><a href="#" class="dropdown-item py-1">Bestsellery sofa</a></li>
+                                        <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
+                                        <li><a href="#" class="dropdown-item py-1"> Bestsellery sofa</a></li>
 
-                                     </ul>
-                                 </div>
-                                 <div class="mega-dropdown-column px-2 ">
+                                    </ul>
+                                </div>
+                                <div class="mega-dropdown-column px-2 ">
 
-                                     <img src="img/menu-preview.jpg" alt="" style="max-width: 250px">
-<!--                                     <img src="https://via.placeholder.com/250x150/FF0000/FFFFFF" alt="">-->
+                                    <img src="img/menu-preview.jpg" alt="" style="max-width: 250px">
+                                    <!--                                     <img src="https://via.placeholder.com/250x150/FF0000/FFFFFF" alt="">-->
 
-                                 </div>
-                             </div>
-                         </div>
-                     </li>
-                     <li class="nav-item dropdown">
-                         <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown">Wezgłowia</a>
-                         <ul class="dropdown-menu rounded-0 border-0">
-                             <li><a href="#" class="dropdown-item">subCategory 3/1</a></li>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown">Wezgłowia</a>
+                        <ul class="dropdown-menu rounded-0 border-0">
+                            <li><a href="#" class="dropdown-item">subCategory 3/1</a></li>
 
-                         </ul>
-                     </li>
-                     <li class="nav-item dropdown">
-                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Materace</a>
-                         <ul class="dropdown-menu rounded-0 border-0">
-                             <li><a href="#" class="dropdown-item">subCategory 3/1</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Materace</a>
+                        <ul class="dropdown-menu rounded-0 border-0">
+                            <li><a href="#" class="dropdown-item">subCategory 3/1</a></li>
 
-                         </ul>
-                     </li>
-                     <li class="nav-item">
-                         <a href="#" class="nav-link">Sofy</a>
-                     </li>
-                     <li class="nav-item">
-                         <a href="#" class="nav-link">Tekstylia</a>
-                     </li>
-                     <li class="nav-item">
-                         <a href="#" class="nav-link">Inspiracje</a>
-                     </li>
-                     <li class="nav-item">
-                         <a href="#" class="nav-link">Szybka dostawa</a>
-                     </li>
-                     <li class="nav-item">
-                         <a href="#" class="nav-link">Okazje</a>
-                     </li>
-                     <li class="nav-item">
-                         <a href="#" class="nav-link">Strefa Architekta</a>
-                     </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Sofy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Tekstylia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Inspiracje</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Szybka dostawa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Okazje</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Strefa Architekta</a>
+                    </li>
 
-                 </ul>
-             </div>
+                </ul>
+            </div>
 
-         </div>
+        </div>
 
-         <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon"></span>
-         </button>
-         <!--
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--
         <a href="#" class="btn btn-outline-dark btn-sm " target="_blank" rel="noopener">
             <i class="bx bx-heart fs-6  "></i>
 
@@ -229,8 +283,8 @@ window.addEventListener('load', function () {
 
         </a>
 -->
-     </div>
- </header>    <section class="container-fluid  d-flex p-lg-5 p-2  justify-content-center text-white " style="background: url(img/style/wall.jpg)   repeat  center center  ; background-size: contain;">
+    </div>
+</header>    <section class="container-fluid  d-flex p-lg-5 p-2  justify-content-center text-white " style="background: url(img/style/wall.jpg)   repeat  center center  ; background-size: contain;">
         <div class="row">
 
            
