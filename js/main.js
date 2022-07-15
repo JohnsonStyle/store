@@ -25,13 +25,16 @@
                responsive: [{
                   breakpoint:800,
                   settings: {
-                         adaptiveHeight:true,
+                      prevArrow: '<button type="button" class="slick-prev"><i class="bx bx-chevron-left"></i></button>',
+                      nextArrow: '<button type="button" class="slick-next"><i class="bx bx-chevron-right"></i></button>',
+                      adaptiveHeight:true,
+                      arrows: true,
                            }
                  }, ],
           });
           $('.slider-nav').slick({
               prevArrow: '<button type="button" class="slick-prev"><i class="bx bx-chevron-up"></i></button>',
-              nextArrow: '<button type="button" class="slick-prev"><i class="bx bx-chevron-down"></i></button>',
+              nextArrow: '<button type="button" class="slick-next"><i class="bx bx-chevron-down"></i></button>',
               slidesToShow: 10,
               slidesToScroll: 1,
               asNavFor: '.slider-for',
