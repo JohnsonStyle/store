@@ -2,6 +2,10 @@
 
           const Mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
+          
+              if ($(window).width() <800) {
+      $( "h1" ).appendTo( $( ".breadcrumb" ) ); //responsive replace TITLE to UP
+        } 
 
           //focus input Search form
           $(".searchModalfocus").click(function () {
@@ -152,8 +156,13 @@
                             }
   
     
-    
-//slider
+        
+//slider   //
+
+
+
+
+
 
 $('.product-carousel').slick({
 		lazyLoad: 'ondemand',
@@ -185,9 +194,7 @@ $('.product-carousel').slick({
 					slidesToScroll: 1
 				}
 			}
-			// You can unslick at a given breakpoint now by adding:
-			// settings: "unslick"
-			// instead of a settings object
+		 
 		]
 });
     $('.product-carousel-2').slick({
@@ -220,12 +227,11 @@ $('.product-carousel').slick({
 					slidesToScroll: 1
 				}
 			}
-			// You can unslick at a given breakpoint now by adding:
-			// settings: "unslick"
-			// instead of a settings object
+		 
 		]
+        
+      
 });
     
-       if ($(window).width() <800) {
-      $( "h1" ).appendTo( $( ".breadcrumb" ) ); //responsive replace TITLE to UP
-        }
+       
+     

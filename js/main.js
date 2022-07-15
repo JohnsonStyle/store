@@ -56,6 +56,44 @@
                  }, ],
           });
 
+          
+          
+          
+          $('.product-carousel').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+    responsive: [{
+                  breakpoint:800,
+                  settings: {
+                        slidesToShow: 1,
+                        variableWidth: false,
+                        vertical: false,
+                         arrows: false,
+                           }
+                 }, ],
+});
+$('.product-carousel-2').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+     responsive: [{
+                  breakpoint:800,
+                  settings: {
+                        slidesToShow: 1,
+                        variableWidth: false,
+                        vertical: false,
+                         arrows: false,
+                           }
+                 }, ],
+});
+
+          
+          
 
           //default
           let tkaninaCode = $("#colors .option input ").first().val().replace(/\d+/g, ''), // .replace(/ /g, '')
