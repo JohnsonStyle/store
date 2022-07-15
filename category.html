@@ -238,6 +238,11 @@
         <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        
+        
+        <button id="filterRespons" class="btn  p-2  " target="_blank" rel="noopener">
+                                         Filter  <i class="bx bx-cart"></i>
+        </button>
         <!--
         <a href="#" class="btn btn-outline-dark btn-sm " target="_blank" rel="noopener">
             <i class="bx bx-heart fs-6  "></i>
@@ -263,50 +268,23 @@
                     <li class="breadcrumb-item active" aria-current="page">Collection Della</li>
                 </ol>
             </nav>
-            <h1 class="col-lg-8 col-sm-12  d-flex align-items-end flex-column" style="font-weight: 100">Category Łóżka </h1>
+            <h1 class="col-lg-8 col-sm-12  d-flex align-items-end flex-column" style="font-weight: 100">Category Łóżka </h1> 
             <hr>
+            
             <div class="container ">
                 <div class="row">
-                    <div class="col-lg-3 col-sm-12  border border-white filter">
-                        <!--                    <h3 class=" text-uppercase mb-3 lead-h-text  ">Filter:</h3>-->
-
-
-
-
-
                    
-
-
-
-
+                    <div id="myCart2" class="col-lg-3 col-sm-12  border border-white filter sidefilter">
+                       <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()"><span>Accept</span> × </a>
+   <!--                    <h3 class=" text-uppercase mb-3 lead-h-text  ">Filter:</h3>--> 
 
                         <div class="accordion accordion-flush my-3" id="accordionFilter" style="margin-right:20px">
                             <div class="accordion-item pb-4 mb-2">
                                 <div class="accordion-body">
-                                    <h3 class="h6">Cena
-
-                                        <button id="myCartIco2" class="btn  p-2  " target="_blank" rel="noopener">
-                                            <i class="bx bx-cart"></i>
-                                            </button>
-
-
-                                    </h3>
-                                    
-                                    
-                                    
-                                    
-                                    
-     <div id="myCart2" class="sidefilter">
-                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">×</a>
-                            <a href="#"> <i class="bx bx-cart   "></i> - Tovar #1 - 5999 zl</a>
-                            <a href="#"> <i class="bx bx-cart   "></i> - Tovar #2 - 4999 zl</a>
-                            <a href="#"> <i class="bx bx-cart   "></i> - Tovar #3 - 3999 zl</a>
-                            <a href="#"> <i class="bx bx-cart   "></i> - Tovar #4 - 7050 zl</a>
-                        </div>
-
+                                    <h3 class="h6">Cena</h3>
 
                         <script>
-                            document.getElementById("myCartIco2").onclick = function() {
+                            document.getElementById("filterRespons").onclick = function() {
                                 document.getElementById("myCart2").classList.toggle("cartTrigger");
                             }
 
@@ -314,10 +292,7 @@
                                 document.getElementById("myCart2").classList.toggle("cartTrigger");
 
                             }
-                        </script>                                    
-                                    
-                                    
-                                    
+                        </script>
                                     
                                     <div class="range-slider" data-start-min="2300" data-start-max="7700" data-min="50" data-max="10000" data-step="20">
                                         <div class="range-slider-ui"></div>

@@ -325,18 +325,8 @@ header {
     font-size: 18px;
   }
 }
-.sidefilter {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 8888;
-  top: 0;
-  left: 0;
-  background-color: red;
-  overflow-x: hidden;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  padding-top: 60px;
+#filterRespons {
+  display: none;
 }
 
 .sidefilter a {
@@ -353,26 +343,50 @@ header {
   color: #f1f1f1;
 }
 
-.sidefilter .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.cartTrigger {
-  width: 300px;
-  z-index: 10;
-}
-
-@media screen and (max-height: 450px) {
-  .sidefilter {
-    padding-top: 15px;
+@media screen and (max-width: 750px) {
+  #filterRespons {
+    display: block;
   }
 
-  .sidefilter a {
-    font-size: 18px;
+  .accordion-flush .accordion-item:last-child {
+    margin-bottom: 50px !important;
+  }
+
+  .sidefilter {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 8888;
+    padding: 0px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  .cartTrigger {
+    width: 100%;
+    z-index: 9999999 !important;
+  }
+
+  .cartTrigger .closebtn {
+    position: fixed;
+    bottom: 0;
+    font-size: 37px;
+    color: #ffffff;
+    background: #c1a69a;
+    z-index: 99;
+    text-align: center;
+    width: 100%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  .cartTrigger .closebtn span {
+    font-weight: 100;
+    font-size: 25px;
   }
 }
 .hSlider {
@@ -1118,7 +1132,8 @@ span.result {
           filter: brightness(0.9) brightness(0.9) contrast(1.3) contrast(1.3) saturate(150%);
 }
 
-.btn-alta, .btn-check:checked + .btn-outline-alta {
+.btn-alta,
+.btn-check:checked + .btn-outline-alta {
   color: #fff;
   background-color: #b1998f;
   border-color: #b1998f;
