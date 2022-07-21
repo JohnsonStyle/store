@@ -1,0 +1,997 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>USER PAGE AltaBeds home page</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/styles.css" rel="stylesheet" >
+    <link href="css/boxicons.min.css" rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+  <script async
+  src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.2/dist/lazyload.min.js"
+></script>
+</head>
+<body>
+ 
+<figure class="preloader" id="preloader">
+  <div class="circles-group">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+</figure>
+<div class="background"></div>
+<script>
+const preloader = document.querySelector('#preloader');
+preloader.classList.add('show-preloader');
+window.addEventListener('load', function () {
+	//setTimeout(function(){
+    	preloader.classList.remove('show-preloader');
+	//},0);
+}); 
+</script>
+<!--PRELOADER--><nav class="d-none p-2 col-12 text-white  text-center" style="background: linear-gradient(rgb(227, 177, 157) 0%, rgb(217, 171, 119) 100%)">
+    <div class="container-fluid " style="border: 1px solid rgb(255, 255, 255); ">
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center   my-2">
+            <li class="nav-item"><a href="#" class="nav   text-white   " style="text-decoration:none">
+                    Zarejestruj sie i otrzymaj voucher 50 zł!</a></li>
+        </ul>
+        <!--ul class="nav">
+        <li class="nav-item"><a href="#" class="nav-link text-white px-2">tel: +48 777-777-777</a></li>
+      </ul-->
+    </div>
+</nav>
+
+
+<nav class="py-2 bg-light border-bottom">
+    <div class="container d-flex flex-wrap">
+
+
+        <!--
+         <div class="nav col-4">
+                 <style>
+                     .map {position: relative;
+                        top: -6px; font-size: 14px!important;
+                     }
+                 </style>
+                 <ul class=" list-inline ps-0 mb-0">
+                     <li class="list-inline-item"> 
+                         <i class="bx bx-map  rounded-circle border border-secondary p-1 "></i>
+                             <a class="btn map" target="_blank" href="https://www.google.com/maps/place/JohnsonStyle+Sp.z.o.o/@52.1616071,20.9273879,15z/data=!4m2!3m1!1s0x0:0x12e8844762fb5cb2?sa=X&ved=2ahUKEwi4mJj5gev3AhXAQvEDHV9qBYkQ_BJ6BAhAEAU">Aleja Krakowska 97, 05-090 Raszyn</a>
+                     </li>
+                     <li class="list-inline-item">
+                         <i class="bx bx-phone rounded-circle border border-secondary p-1  "></i>
+                         <a class="btn map" href="tel:+48 999 777 777">+48 777-777-777 </a>
+                                                                </li>
+                 </ul>
+             </div>
+         </div>
+-->
+
+
+
+        <!--offset-4-->
+        <a href="/" class=" offset-lg-4 col-lg-4 col-12 d-flex justify-content-center  ">
+            <img src="svg/logo.svg" width="200">
+        </a>
+
+
+        <div class="col-lg-4 col-12 nav d-flex justify-content-lg-end justify-content-center ">
+
+
+          
+
+<div class="modal fade" id="searchModal" aria-hidden="true" aria-labelledby="searchModall" tabindex="-1">
+    <div class="modal-dialog  " style="margin: 0; max-width: 100%; padding:1px">
+        <div class="modal-content border rounded-0">
+
+
+<div class="modal-body row p-4   m-3">
+    <div class="col-1 offset-1">
+    <i class="bx bx-search"></i>
+    </div>
+    <div class="col-8">
+        <input class="searchModal"   type="text" name="" placeholder="Szukaj na stronie..." >
+    </div>
+    <div class="col-2 "> <button type="button" class="btn-close m-2" data-bs-dismiss="modal" aria-label="Close"></button></div>
+
+</div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .searchModal {
+        font-weight: 100;
+        font-size: 24px;
+        border: 0;
+        flex: 1 1 auto;
+         width: 100%;
+        padding: 8px 10px;
+        border-radius: 0;
+
+    }
+    #searchModal i {font-size: 2rem;position: relative;    top: 10px;float: right;}
+    .searchModal:focus {   outline: none; background-color: rgba(177, 153, 143, 0.0); }
+</style>
+<!--
+            <div class="d-flex justify-content-center h-100  ">
+                <div class="searchbar">
+                    <input class="search_input" type="text" name="" placeholder="Szukaj...">
+                    <a href="#" class="search_icon"><i class="bx bx-search"></i></a>
+                </div>
+            </div>
+-->
+<!--
+             <a href="#" class="btn btn-outline-dark p-2 d-none  d-sm-block" target="_blank" rel="noopener">
+                 <i class="bx bx-search   "></i>
+             </a>
+-->
+            <button  class="btn p-2  ms-1 searchModalfocus"  data-bs-toggle="modal" href="#searchModal" role="button">
+                <i class="bx bx-search"></i>
+            </button>
+            <button class="btn   p-2  ms-1  " target="_blank" rel="noopener">
+                <i class="bx bx-heart    "></i>
+            </button>
+            <button class="btn    p-2 mx-1  " target="_blank" rel="noopener">
+                <a href="user.html"><i class="bx bx-user   "></i></a>
+            </button>
+            <button id="myCartIco" class="btn  p-2  " target="_blank" rel="noopener">
+                <i class="bx bx-cart   "></i>
+            </button>
+
+            <div id="myCart" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="#"> <i class="bx bx-cart   "></i> - Tovar #1 - 5999 zl</a>
+                <a href="#"> <i class="bx bx-cart   "></i> - Tovar #2 - 4999 zl</a>
+                <a href="#"> <i class="bx bx-cart   "></i> - Tovar #3 - 3999 zl</a>
+                <a href="#"> <i class="bx bx-cart   "></i> - Tovar #4 - 7050 zl</a>
+            </div>
+
+
+
+        </div>
+    </div>
+</nav>
+ 
+
+  
+  
+<header id="navbar-sticky" class=" mb-auto navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container px-0">
+        <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body mx-auto flex-column">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Nowości</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="category.html" class="nav-link">Bestsellery</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Łóżka</a>
+                        <div class="dropdown-menu rounded-0 border-0 px-3 py-4" style="min-width: 22rem;">
+                            <div class="d-lg-flex ">
+                                <div class="mega-dropdown-column">
+                                    <h6 class="px-3 mb-2">Category #1</h6>
+                                    <ul class="list-unstyled mb-3">
+                                        <li><a href="#" class="dropdown-item py-1">Bestsellery sofa</a></li>
+                                        <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
+                                        <li><a href="#" class="dropdown-item py-1">Bestsellery sofa</a></li>
+                                        <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
+
+                                    </ul>
+
+                                </div>
+                                <div class="mega-dropdown-column">
+                                    <h6 class="px-3 mb-2">Category #2</h6>
+                                    <ul class="list-unstyled mb-3">
+                                        <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
+                                        <li><a href="#" class="dropdown-item py-1">Bestsellery sofa</a></li>
+                                        <li><a href="#" class="dropdown-item py-1">Bestsellery </a></li>
+                                        <li><a href="#" class="dropdown-item py-1"> Bestsellery sofa</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="mega-dropdown-column px-2 ">
+
+                                    <img src="img/menu-preview.jpg" alt="" style="max-width: 250px">
+                                    <!--                                     <img src="https://via.placeholder.com/250x150/FF0000/FFFFFF" alt="">-->
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown">Wezgłowia</a>
+                        <ul class="dropdown-menu rounded-0 border-0">
+                            <li><a href="#" class="dropdown-item">subCategory 3/1</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Materace</a>
+                        <ul class="dropdown-menu rounded-0 border-0">
+                            <li><a href="#" class="dropdown-item">subCategory 3/1</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Sofy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Tekstylia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Inspiracje</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Szybka dostawa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Okazje</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Strefa Architekta</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        
+        <button id="filterRespons" class="btn  p-2  " target="_blank" rel="noopener">
+                                         Filter  <i class="bx bx-cart"></i>
+        </button>
+        <!--
+        <a href="#" class="btn btn-outline-dark btn-sm " target="_blank" rel="noopener">
+            <i class="bx bx-heart fs-6  "></i>
+
+        </a>
+
+        <a href="#" class="btn btn-outline-dark btn-sm  mx-1" target="_blank" rel="noopener">
+            <i class="bx bx-user fs-6  "></i>
+
+        </a>
+        <a href="#" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">
+            <i class="bx bx-cart fs-6 "></i>
+
+        </a>
+-->
+    </div>
+</header> <link href="css/theme.css" rel="stylesheet" >
+<!--
+  <a class="nav-link" data-bs-toggle="offcanvas" href="#modalShoppingCart">
+                <span data-cart-items="2">
+                  <i class="fe fe-shopping-cart"></i>
+                </span>
+              </a>
+-->
+ 
+ 
+
+ 
+ 
+ <div class="offcanvas offcanvas-end show" id="modalShoppingCart" tabindex="-1" role="dialog" aria-modal="true" style="visibility: visible;">
+    
+      <!-- Full cart (add `.d-none` to disable it) -->
+    
+      <!-- Close -->
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+        <i class="fe fe-x" aria-hidden="true"></i>
+      </button>
+    
+      <!-- Header-->
+      <div class="offcanvas-header lh-fixed fs-lg">
+        <strong class="mx-auto">Twój koszyk (1)</strong>
+      </div>
+    
+      <!-- List group -->
+      <ul class="list-group list-group-lg list-group-flush">
+ 
+        <li class="list-group-item">
+          <div class="row align-items-center">
+            <div class="col-4">
+    
+              <!-- Image -->
+              <a href="./product.html">
+                <img class="img-fluid" src="img/insta.jpg" alt="...">
+              </a>
+    
+            </div>
+            <div class="col-8">
+    
+              <!-- Title -->
+              <p class="fs-sm fw-bold mb-6">
+                <a class="text-body" href="tovar.html">Zamszowe łóżko z krzyżem</a> <br>
+                <span class="text-muted">999.00 zl</span>
+              </p>
+    
+              <!--Footer -->
+              <div class="d-flex align-items-center">
+    
+                <!-- Select -->
+                <select class="form-select form-select-xxs w-auto">
+                  <option value="1">1</option>
+                  <option value="1">2</option>
+                  <option value="1">3</option>
+                </select>
+    
+                <!-- Remove -->
+                <a class="fs-xs text-gray-400 ms-auto" href="#!">
+                  <i class="fe fe-x"></i> Usunąć
+                </a>
+    
+              </div>
+    
+            </div>
+          </div>
+        </li>
+      </ul>
+    
+      <!-- Footer -->
+      <div class="offcanvas-footer justify-between lh-fixed fs-sm bg-light mt-auto">
+        <strong>Suma częściowa</strong> <strong class="ms-auto">999.00 zl</strong>
+      </div>
+    
+      <!-- Buttons -->
+      <div class="offcanvas-body">
+        <a class="btn w-100 btn-dark" href="./checkout.html">Kontynułuj żeby sprawdzić</a>
+        <a class="btn w-100 btn-outline-dark mt-2" href="./shopping-cart.html">Zobacz Koszyk</a>
+      </div>
+    
+      <!-- Empty cart (remove `.d-none` to enable it) -->
+      <div class="d-none">
+    
+        <!-- Close -->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fe fe-x" aria-hidden="true"></i>
+        </button>
+    
+        <!-- Header-->
+        <div class="offcanvas-header lh-fixed fs-lg">
+          <strong class="mx-auto">Koszyk (0)</strong>
+        </div>
+    
+        <!-- Body -->
+        <div class="offcanvas-body flex-grow-0 my-auto">
+    
+          <!-- Heading -->
+          <h6 class="mb-7 text-center">Your cart is empty 😞</h6>
+    
+          <!-- Button -->
+          <a class="btn w-100 btn-outline-dark" href="#!">
+            Continue Shopping
+          </a>
+    
+        </div>
+    
+      </div>
+    
+    </div>
+ 
+ 
+<section class="mt-5 pt-7 pb-12">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+
+            <!-- Heading -->
+            <h3 class="mb-10">Moje konto</h3>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-3">
+
+            <!-- Nav -->
+            <nav class="mb-10 mb-md-0">
+              <div class="list-group list-group-sm list-group-strong list-group-flush-x">
+                <a class="list-group-item list-group-item-action dropend-toggle active" href="account-orders.html">
+                 Zamówienia
+                </a>
+                <a class="list-group-item list-group-item-action dropend-toggle " href="account-wishlist.html">
+                 Lista życzeń
+                </a>
+                <a class="list-group-item list-group-item-action dropend-toggle " href="account-personal-info.html">
+                  Informacje osobiste
+                </a>
+                <a class="list-group-item list-group-item-action dropend-toggle " href="account-address.html">
+                  Adres
+                </a>
+                <a class="list-group-item list-group-item-action dropend-toggle " href="account-payment.html">
+                  Formy płatności
+                </a>
+                <a class="list-group-item list-group-item-action dropend-toggle" href="#!">
+                 Wyloguj
+                </a>
+              </div>
+            </nav>
+
+          </div>
+          <div class="col-12 col-md-9 col-lg-8 offset-lg-1">
+
+            <!-- Order -->
+            <div class="card card-lg mb-5 border">
+              <div class="card-body pb-0">
+
+                <!-- Info -->
+                <div class="card card-sm">
+                  <div class="card-body bg-light">
+                    <div class="row">
+                      <div class="col-6 col-lg-3">
+
+                        <!-- Heading -->
+                        <h6 class="heading-xxxs text-muted">NR ZAMÓWIENIA::</h6>
+
+                        <!-- Text -->
+                        <p class="mb-lg-0 fs-sm fw-bold">
+                          573290189
+                        </p>
+
+                      </div>
+                      <div class="col-6 col-lg-3">
+
+                        <!-- Heading -->
+                        <h6 class="heading-xxxs text-muted">DATA WYSYŁKI::</h6>
+
+                        <!-- Text -->
+                        <p class="mb-lg-0 fs-sm fw-bold">
+                          <time datetime="2019-10-01">
+                            03 Oct, 2022
+                          </time>
+                        </p>
+
+                      </div>
+                      <div class="col-6 col-lg-3">
+
+                        <!-- Heading -->
+                        <h6 class="heading-xxxs text-muted">Status:</h6>
+
+                        <!-- Text -->
+                        <p class="mb-0 fs-sm fw-bold">
+                          |Oczekujący na dostawę
+                        </p>
+
+                      </div>
+                      <div class="col-6 col-lg-3">
+
+                        <!-- Heading -->
+                        <h6 class="heading-xxxs text-muted">Kwota zamówienia:</h6>
+
+                        <!-- Text -->
+                        <p class="mb-0 fs-sm fw-bold">
+                          2 999 zl
+                        </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-footer">
+                <div class="row align-items-center">
+                  <div class="col-12 col-lg-6">
+                    <div class="row gx-5 mb-4 mb-lg-0">
+                      <div class="col-3">
+
+                        <!-- Image -->
+                        <div class="ratio ratio-1x1 bg-cover" style="background-image: url(img/insta.jpg);"></div>
+
+                      </div>
+                      <div class="col-3">
+
+                        <!-- Image -->
+                        <div class="ratio ratio-1x1 bg-cover" style="background-image: url(img/insta.jpg);"></div>
+
+                      </div>
+                      <div class="col-3">
+
+                        <!-- Image -->
+                        <div class="ratio ratio-1x1 bg-cover" style="background-image: url(img/insta.jpg);"></div>
+
+                      </div>
+                      <div class="col-3">
+
+                        <!-- Image -->
+                        <div class="ratio ratio-1x1 bg-light">
+                          <a class="ratio-item ratio-item-text text-reset" href="#!">
+                            <div class="fs-xxs fw-bold">
+                              +2 <br> więcej
+                            </div>
+                          </a>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="row gx-5">
+                      <div class="col-6">
+
+                        <!-- Button -->
+                        <a class="btn btn-sm w-100 btn-outline-dark" href="account-order.html">
+                         Szczegóły  
+                        </a>
+
+                      </div>
+                      <div class="col-6">
+
+                        <!-- Button -->
+                        <a class="btn btn-sm w-100 btn-outline-dark" href="#!">
+                          Śledzenie przesyłki
+                        </a>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order -->
+            <div class="card card-lg mb-5 border">
+              <div class="card-body pb-0">
+
+                    <!-- Info -->
+                <div class="card card-sm">
+                  <div class="card-body bg-light">
+                    <div class="row">
+                      <div class="col-6 col-lg-3">
+
+                        <!-- Heading -->
+                        <h6 class="heading-xxxs text-muted">NR ZAMÓWIENIA::</h6>
+
+                        <!-- Text -->
+                        <p class="mb-lg-0 fs-sm fw-bold">
+                          673291782
+                        </p>
+
+                      </div>
+                      <div class="col-6 col-lg-3">
+
+                        <!-- Heading -->
+                        <h6 class="heading-xxxs text-muted">DATA WYSYŁKI::</h6>
+
+                        <!-- Text -->
+                        <p class="mb-lg-0 fs-sm fw-bold">
+                          <time datetime="2019-10-01">
+                            11 Oct, 2022
+                          </time>
+                        </p>
+
+                      </div>
+                      <div class="col-6 col-lg-3">
+
+                        <!-- Heading -->
+                        <h6 class="heading-xxxs text-muted">Status:</h6>
+
+                        <!-- Text -->
+                        <p class="mb-0 fs-sm fw-bold">
+                          Oczekujący na dostawę
+                        </p>
+
+                      </div>
+                      <div class="col-6 col-lg-3">
+
+                        <!-- Heading -->
+                        <h6 class="heading-xxxs text-muted">Kwota zamówienia:</h6>
+
+                        <!-- Text -->
+                        <p class="mb-0 fs-sm fw-bold">
+                          1 999 zl
+                        </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-footer">
+                <div class="row align-items-center">
+                  <div class="col-12 col-lg-6">
+                    <div class="row gx-5 mb-4 mb-lg-0">
+                      <div class="col-3">
+
+                        <!-- Image -->
+                        <div class="ratio ratio-1x1 bg-cover" style="background-image: url(img/insta.jpg);"></div>
+
+                      </div>
+                    </div>
+                  </div>
+                 <div class="col-12 col-lg-6">
+                    <div class="row gx-5">
+                      <div class="col-6">
+
+                        <!-- Button -->
+                        <a class="btn btn-sm w-100 btn-outline-dark" href="account-order.html">
+                         Szczegóły  
+                        </a>
+
+                      </div>
+                      <div class="col-6">
+
+                        <!-- Button -->
+                        <a class="btn btn-sm w-100 btn-outline-dark" href="#!">
+                          Śledzenie przesyłki
+                        </a>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order -->
+            <div class="card card-lg mb-5 border">
+              <div class="card-body pb-0">
+
+                  <!-- Info -->
+                <div class="card card-sm">
+                  <div class="card-body bg-light">
+                    <div class="row">
+                      <div class="col-6 col-lg-3">
+
+                        <!-- Heading -->
+                        <h6 class="heading-xxxs text-muted">NR ZAMÓWIENIA::</h6>
+
+                        <!-- Text -->
+                        <p class="mb-lg-0 fs-sm fw-bold">
+                          673290789
+                        </p>
+
+                      </div>
+                      <div class="col-6 col-lg-3">
+
+                        <!-- Heading -->
+                        <h6 class="heading-xxxs text-muted">DATA WYSYŁKI::</h6>
+
+                        <!-- Text -->
+                        <p class="mb-lg-0 fs-sm fw-bold">
+                          <time datetime="2019-10-01">
+                            01 Oct, 2022
+                          </time>
+                        </p>
+
+                      </div>
+                      <div class="col-6 col-lg-3">
+
+                        <!-- Heading -->
+                        <h6 class="heading-xxxs text-muted">Status:</h6>
+
+                        <!-- Text -->
+                        <p class="mb-0 fs-sm fw-bold">
+                          Oczekujący na dostawę
+                        </p>
+
+                      </div>
+                      <div class="col-6 col-lg-3">
+
+                        <!-- Heading -->
+                        <h6 class="heading-xxxs text-muted">Kwota zamówienia:</h6>
+
+                        <!-- Text -->
+                        <p class="mb-0 fs-sm fw-bold">
+                          799 zl
+                        </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-footer">
+                <div class="row align-items-center">
+                  <div class="col-12 col-lg-6">
+                    <div class="row gx-5 mb-4 mb-lg-0">
+                      <div class="col-3">
+
+                        <!-- Image -->
+                        <div class="ratio ratio-1x1 bg-cover" style="background-image: url(img/insta.jpg);"></div>
+
+                      </div>
+                      <div class="col-3">
+
+                        <!-- Image -->
+                        <div class="ratio ratio-1x1 bg-cover" style="background-image: url(img/insta.jpg);"></div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="row gx-5">
+                      <div class="col-6">
+
+                        <!-- Button -->
+                        <a class="btn btn-sm w-100 btn-outline-dark" href="account-order.html">
+                         Szczegóły  
+                        </a>
+
+                      </div>
+                      <div class="col-6">
+
+                        <!-- Button -->
+                        <a class="btn btn-sm w-100 btn-outline-dark" href="#!">
+                          Śledzenie przesyłki
+                        </a>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav class="d-flex justify-content-center justify-content-md-end mt-10">
+              <ul class="pagination pagination-sm text-gray-400">
+                <li class="page-item">
+                  <a class="page-link page-link-arrow" href="#">
+                    <svg class="svg-inline--fa fa-caret-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M137.4 406.6l-128-127.1C3.125 272.4 0 264.2 0 255.1s3.125-16.38 9.375-22.63l128-127.1c9.156-9.156 22.91-11.9 34.88-6.943S192 115.1 192 128v255.1c0 12.94-7.781 24.62-19.75 29.58S146.5 415.8 137.4 406.6z"></path></svg><!-- <i class="fa fa-caret-left"></i> Font Awesome fontawesome.com -->
+                  </a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">3</a>
+                </li>
+           
+                <li class="page-item">
+                  <a class="page-link page-link-arrow" href="#">
+                    <svg class="svg-inline--fa fa-caret-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z"></path></svg><!-- <i class="fa fa-caret-right"></i> Font Awesome fontawesome.com -->
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+ <section id="newslatter" class=" " style="background:#50403a">
+     <div class="container mt-5 p-5     font-sm">
+		<div class="row  text-sm-left text-md-left">
+        
+               <div class="col-xs-6 text-white col align-middle">
+					<h5><i class='bx bxl-telegram' ></i> NEWSLETTER</h5>
+					<p>Zawsze aktualne informacje o nowościach i promocjach. <br> <u>Kupon rabatowy</u> na pierwsze zakupy</p>
+					 
+				</div>
+				<div class="col-xs-6  col">
+					 <div class="input-group input-group-lg mb-3 mt-4">
+                              <input type="text" class="form-control" placeholder="Wpisz adres e-mail" aria-label="Recipient's username" aria-describedby="button-addon2">
+                              <button class="btn btn-outline-light border-3" type="button" id="button-addon2">Zapisz się</button>
+                            </div>
+				</div>
+        
+        
+         </div>
+     </div>
+ </section>
+
+<!-- Footer -->
+	<section id="footer">
+		<div class="container   p-5     font-sm">
+			<div class="row  text-sm-left text-md-left">
+				<div class="col-xs-12  col  py-5">
+					<h5>Pomoc</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="#"><i class='bx bx-chevrons-right'></i>Regulaminy</a></li>
+						<li><a href="#"><i class='bx bx-chevrons-right'></i>Zwroty i reklamacje</a></li>
+						<li><a href="#"><i class='bx bx-chevrons-right'></i>Pytania i odpowiedzi</a></li>
+					 
+					</ul>
+				</div>
+				<div class="col-xs-12  col  py-5">
+					<h5>Moje konto</h5>
+					<ul class="list-unstyled quick-links">
+					  <li><a href="#"><i class='bx bx-chevrons-right'></i>Twoje zamówienia</a></li>
+					  <li><a href="#"><i class='bx bx-chevrons-right'></i>Ustawienia konta</a></li>
+					  <li><a href="#"><i class='bx bx-chevrons-right'></i>Przechowalnia</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12  col  py-5">
+					<h5>Dostawa i płatność</h5>
+					<ul class="list-unstyled quick-links">
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Formy płatności</a></li> 
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Ratyy</a></li> 
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Czas i koszty dostawy</a></li> 
+					</ul>
+				</div>
+				 <div class="col-xs-12  col  py-5">
+					<h5> Informacje</h5>
+					<ul class="list-unstyled quick-links">
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Formularz kontaktowy</a></li> 
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Polityka prywatności</a></li> 
+						 <li><a href="#"><i class='bx bx-chevrons-right'></i>Jak kupować?</a></li> 
+					</ul>
+				</div>
+				<div class="col-xs-12   col  py-5">
+					<h5> O Nas</h5>
+					<ul class="list-unstyled quick-links">
+                        <li><b>Zapraszamy do kontaktu</b></li> 
+						 <li><a href="#"><i class='bx bx-mail-send' ></i> info@johnsonstyle.pl</a></li> 
+						 <li><a href="#"><i class='bx bx-phone' ></i> +4 777-777-777</a></li> 
+					</ul>
+                     
+                      
+				</div>
+			</div>
+			 
+			 
+			<div class="row">
+				 <hr>
+				<div class="col-lg-6 col-12 mt-2 mt-sm-2 text-center text-white">
+					<ul class="list-unstyled quick-links social">
+<!--                       <li style="float:left"><b>Obserwuj nas</b></li> -->
+						 <li>
+						   <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+						   <a href="#"><i class='bx bxl-instagram' ></i></a>
+						   <a href="#"><i class='bx bxl-youtube' ></i></a>
+						 
+						 </li> 
+						  
+					</ul>
+				</div>
+<!--
+				<div class="col-lg-4 col-12 mt-2 mt-sm-2 text-center text-white">
+					<p>  All right Reversed. </p>
+					<p class="h6">© All right Reversed.<a class="text-green ml-2" href="#" target="_blank">JohnsonStyle</a></p>
+				</div>
+-->
+				<div class="col-lg-6 col-12 mt-2 mt-sm-2 text-center text-white"> 
+					 <ul class="list-unstyled quick-links  dp">
+<!--                       <li><b>Dostawa i płatność</b></li> -->
+						 <li>
+						   <i class='bx bxl-visa' ></i>
+						   <i class='bx bxl-mastercard' ></i>
+						   <i class='bx bxl-paypal' ></i>
+						 </li> 
+					</ul>
+				</div>
+				<hr>
+			</div>
+			
+			<div class="row">
+				 
+			 
+				<div class="col-  col-12 mt-2 mt-sm-2 text-center text-white">
+			 
+					<p class="h6">© All right Reversed.<a class="text-green ml-2" href="#" target="_blank"> JohnsonStyle 2022</a></p>
+				</div>
+				 
+				 
+			</div>
+			
+		</div>
+	</section>
+	<!-- ./Footer -->
+
+
+<style>
+    #newslatter h5{
+        font-weight: 100;
+        font-size: 40px;
+    }
+
+#footer {
+    background: #c1a69a !important;
+}
+    
+    #footer hr{
+        color:#9aa7b5
+    }
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+    text-transform: uppercase
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+ #footer ul li b {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 100;
+    }
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:40px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+    #footer ul.dp li i {
+ 
+	font-size:35px;
+ 
+}
+#footer ul.social li:hover{
+	padding: 3px 0;
+	margin-left:0px!important;
+	font-weight:100!important;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li a:hover i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
+
+</style>
+
+ <script src="js/app.js"></script>
+
+
+
+    </body>
+</html>

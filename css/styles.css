@@ -720,10 +720,10 @@ footer {
   top: calc(50% - 6px);
   cursor: pointer;
   z-index: 999;
-  right: 8px;
+  right: -5px;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-  top: 40%;
+  top: 45%;
 }
 .product-carousel .left,
 .product-carousel-2 .left {
@@ -735,10 +735,10 @@ footer {
   top: calc(50% - 6px);
   cursor: pointer;
   z-index: 999;
-  left: 8px;
+  left: -5px;
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
-  top: 40%;
+  top: 45%;
 }
 
 /** SLICK SLIDER CSS **/

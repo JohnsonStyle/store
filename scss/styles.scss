@@ -675,7 +675,7 @@ footer {
 $secondary: #ffffff;
 $tertiary: #dedede;
 $arrow-size: 12px;
-$arrow-distance: 8px;
+$arrow-distance: -5px;
 $vertical-space: 10px;
 
 .product-carousel,
@@ -704,7 +704,7 @@ $vertical-space: 10px;
         right: $arrow-distance;
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
-        top: 40%;
+        top: 45%;
     }
 
     & .left {
@@ -719,7 +719,7 @@ $vertical-space: 10px;
         left: $arrow-distance;
         transform: rotate(135deg);
         -webkit-transform: rotate(135deg);
-        top: 40%;
+        top: 45%;
     }
 }
 
